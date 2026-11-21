@@ -1,0 +1,365 @@
+<!doctype html><html lang="ja"><head><!--yaruzo-pwa--><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#D1095A"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="英語やるぞ！"><style>.yzhome{display:inline-flex;align-items:center;gap:5px;text-decoration:none;color:#fff;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.42);border-radius:8px;padding:4px 10px 5px;font-weight:700;font-size:13px;margin-right:4px;}.yzhome b{font-size:15px;line-height:1;}</style><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap"><title>英検5級 文法プリント 音読</title><meta charset="utf-8"><style>
+:root{--navy:#1A365D;--blue:#2B6CB0;--green:#2F855A;--orange:#C05621;
+--purple:#6B46C1;--ghdr:#9AE6B4;--gbg:#F0FFF4;--gln:#9AE6B4;
+--grayhdr:#CBD5E0;--yellow:#FFF3BF;--cream:#FFF8F0;--orangeln:#E0B088;
+--tan:#F3E3CF;--tanln:#D9B892;--soft:#5B6B82;--line:#CBD5E0;}
+*{box-sizing:border-box;}@page{size:A4;margin:0;}html,body{margin:0;padding:0;}
+body{font-family:"Inter","Noto Sans JP","Noto Sans CJK JP",sans-serif;color:#222b38;
+font-size:15pt;line-height:1.48;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.en{font-family:"Inter","DejaVu Sans",sans-serif;}
+.page{position:relative;width:210mm;height:297mm;padding:11mm 14mm 14mm;
+page-break-after:always;overflow:hidden;}
+.page:last-child{page-break-after:auto;}
+.hdr{display:flex;justify-content:space-between;align-items:flex-start;}
+.hdr-left{display:flex;align-items:center;gap:15px;}
+.bignum{font-size:30pt;font-weight:800;color:var(--navy);line-height:1;}
+.pills{display:flex;gap:7px;margin-bottom:6px;}
+.pill{display:inline-block;padding:3px 13px;border-radius:12px;color:#fff;
+font-size:12pt;font-weight:700;}
+.pill.navy{background:var(--navy);}.pill.green{background:var(--green);}
+.chlabel{font-size:11pt;font-weight:700;color:#5a6b82;margin:0 0 2px;}
+.htitle{font-size:19pt;font-weight:800;color:var(--navy);line-height:1.1;}
+.qr{width:70px;height:56px;border:1.5px dashed #9aa6b5;border-radius:4px;
+font-size:8pt;color:#8a97a6;text-align:center;display:flex;align-items:center;
+justify-content:center;line-height:1.3;}
+.hdr-rule{height:3px;background:var(--navy);border-radius:2px;margin:8px 0 8px;}
+.lead{color:var(--soft);font-size:13.5pt;margin:0 2px 0;}
+.tab{display:inline-block;color:#fff;font-weight:700;font-size:13pt;
+padding:3px 14px 4px;border-radius:7px;margin:9px 0 5px;}
+.tab.green{background:var(--green);}.tab.orange{background:var(--orange);}
+.tab.purple{background:var(--purple);}.tab.blue{background:var(--blue);}
+
+/* ---- 見くらべ ---- */
+table.cmp{border-collapse:separate;border-spacing:0 4px;width:100%;}
+table.cmp th{font-size:13pt;font-weight:800;padding:5px 10px;border-radius:7px;}
+th.lh{background:var(--grayhdr);color:#2d3748;}
+th.rh{background:var(--ghdr);color:#1c4532;}
+th.ar{width:40px;background:none;}
+table.cmp td{vertical-align:top;}
+td.lc{background:#fff;border:1.5px solid #cbd5e0;border-radius:8px;padding:4px 11px 5px;width:44%;}
+td.rc{background:var(--gbg);border:1.5px solid var(--gln);border-radius:8px;padding:4px 11px 5px;width:44%;}
+td.ar{text-align:center;color:#2F855A;font-size:20pt;font-weight:800;}
+/* 英語は英語だけで1かたまり、日本語は日本語だけで次の行に。文頭は左でそろえる */
+td.lc .en,td.rc .en{display:block;font-size:14pt;line-height:1.2;}
+.cja{display:block;color:#6a6a6a;font-size:10.5pt;margin:2px 0 0;}
+.cen{font-size:15pt;}.ctag{color:var(--soft);font-size:11pt;margin-top:0;}
+
+/* ---- 気づき ---- */
+.notice{border:1.5px dashed var(--green);background:var(--gbg);border-radius:11px;
+padding:9px 16px 10px;margin:0;}
+.notice .p{color:#1c4532;font-weight:400;font-size:13pt;margin:0 0 13px;}
+.rl{border-bottom:1.5px solid #bcd9c6;height:24px;}
+
+/* ---- ルール ---- */
+.rulebox{background:#FFFCF7;border:1.5px solid #ECCBA6;border-radius:11px;
+padding:12px 18px 13px;margin:0;}
+.rlead{font-size:13pt;margin:0 0 9px;color:#6a5a48;}
+.patt{display:flex;gap:11px;margin:0 0 9px;}
+.pchip{background:#fff;border:1.5px solid #E0B089;border-radius:20px;padding:4px 16px;
+font-size:13.5pt;color:#8a4a1e;font-weight:600;}
+.pchip b{color:var(--orange);font-weight:800;}
+/* 枠なしで少し大きめに見せる具体例文 */
+.pexwrap{margin:2px 0 9px;}
+.pex{font-size:17pt;color:var(--orange);font-weight:800;line-height:1.35;margin:0 0 2px;}
+.pex b{color:var(--orange);font-weight:800;}
+.pex.pex-sel{font-weight:500;}
+.rnote{border:1.5px solid #E53E3E;background:#FFF5F5;border-radius:9px;
+padding:7px 13px 8px;margin:9px 0 0;font-size:12pt;color:#9B2C2C;line-height:1.5;}
+.rnote b{color:#C53030;font-weight:800;}
+.dcmp .rnote{font-size:11pt;padding:6px 11px 7px;margin:7px 0 0;}
+.pja b{font-weight:800;color:#7a5a30;}
+.dcmp .pex{font-size:15.5pt;}
+.pja{display:block;font-size:11.5pt;color:#8a7a68;font-weight:600;margin-top:1px;}
+.pchip .pja{display:inline;margin-left:8px;font-size:11pt;}
+.dcmp .pja{font-size:10.5pt;}
+table.be{border-collapse:collapse;width:100%;margin:2px 0 8px;}
+table.be th,table.be td{border:1.5px solid var(--tanln);padding:7px 12px;text-align:center;}
+table.be th{background:var(--tan);color:#7a4a1e;font-weight:800;font-size:14pt;}
+table.be td{background:#fff;font-size:16pt;}
+table.be td.sub{background:#FBF2E6;font-weight:800;color:var(--navy);}
+table.be th:nth-child(1),table.be td:nth-child(1){width:30%;}
+table.be th:nth-child(2),table.be td:nth-child(2){width:42%;}
+table.be td.pt{font-size:12.5pt;color:#6b5a48;font-weight:600;}
+table.be .tja{display:block;font-size:10.5pt;color:#8a7a68;font-weight:600;margin-top:2px;line-height:1.3;}
+table.be td.sub .tja{color:#6b7a8a;}
+table.be.tight th,table.be.tight td{padding:3px 9px;}
+table.be.tight td{font-size:14pt;}table.be.tight th{font-size:12.5pt;}
+table.be.tight .tja{font-size:9.8pt;margin-top:1px;}
+table.be.tight{margin:1px 0 4px;}
+table.be.tight th,table.be.tight td{padding:2.5px 7px;}
+table.be.tight th:nth-child(1),table.be.tight td:nth-child(1){width:15%;font-size:11.5pt;white-space:nowrap;}
+table.be.tight th:nth-child(2),table.be.tight td:nth-child(2){width:29%;font-size:11.5pt;white-space:nowrap;}
+table.be.tight th:nth-child(3),table.be.tight td:nth-child(3){width:56%;text-align:left;}
+table.be.tight td.en{font-size:13.5pt;line-height:1.25;}
+.tline{display:block;}
+.tline + .tline{margin-top:3px;}
+.tcap{font-size:12.5pt;font-weight:800;color:#7a4a1e;margin:7px 0 2px;}
+.dcmp .tcap{font-size:11pt;margin:5px 0 1px;}
+.ruleex{display:flex;align-items:baseline;padding:2.5px 2px;}
+.rx-en{font-size:16.5pt;flex:0 1 auto;min-width:0;}
+.rx-lead{flex:1 1 auto;border-bottom:1.5px dotted #E3CBAC;margin:0 11px 7px;min-width:18px;}
+.rx-ja{font-size:11.5pt;color:#7a6a58;flex:0 1 auto;min-width:0;text-align:right;line-height:1.35;}
+ul.pts{margin:7px 0 0;padding-left:5px;list-style:none;font-size:13pt;}
+ul.pts li{margin:4px 0;text-indent:-15px;padding-left:15px;}
+ul.pts li:before{content:"・";color:var(--orange);font-weight:800;}
+.hl{color:var(--orange);font-weight:800;}.hlb{color:var(--navy);font-weight:800;}
+
+/* ---- 例文 ---- */
+.exrow{display:flex;align-items:baseline;padding:4px 2px;}
+.exnum{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--purple);
+color:#fff;font-size:11pt;font-weight:700;text-align:center;line-height:22px;margin-right:11px;}
+.exen{flex:0 1 auto;min-width:0;font-size:17pt;}
+.exlead{flex:1 1 auto;border-bottom:1.5px dotted #C6CDD6;margin:0 11px 7px;min-width:18px;}
+.exja{flex:0 1 auto;min-width:0;color:#6b7a8d;font-size:11.5pt;text-align:right;line-height:1.35;}
+.yh{background:var(--yellow);font-weight:700;padding:0 2px;border-radius:2px;}
+/* 和訳側：英語のハイライト／太字に対応させる */
+.exja b{background:var(--yellow);color:#3f4a5a;font-weight:700;padding:0 2px;border-radius:2px;}
+.rx-ja b{color:#5a4a38;font-weight:800;}
+.cja b{color:#3f4a5a;font-weight:800;}
+/* 「s が消える」を見せる打ち消し表記 */
+.xs{text-decoration:line-through;text-decoration-color:#D1495B;
+text-decoration-thickness:2px;color:#D1495B;}
+
+/* ---- practice ---- */
+.pbox{display:inline-block;background:var(--blue);color:#fff;font-weight:800;
+font-size:16pt;padding:6px 20px 7px;border-radius:9px;margin:2px 0 6px;}
+.pbox.gray{background:#8A94A6;}
+.prow{display:flex;align-items:center;justify-content:space-between;margin:2px 0 6px;}
+.prow .pbox{margin:0;}
+.score{display:inline-block;border:2.2px solid var(--blue);border-radius:9px;
+min-width:104px;padding:4px 13px 5px;text-align:right;color:var(--navy);
+font-weight:800;font-size:15pt;line-height:1.15;}
+.sec{color:var(--navy);font-weight:800;font-size:15pt;border-left:5px solid var(--blue);
+padding-left:10px;margin:9px 0 6px;}
+.item{margin:0 0 5px;font-size:15pt;}
+.qn{color:var(--blue);font-weight:800;margin-right:4px;}
+.scr{color:var(--blue);font-weight:700;}
+.writeline{border-bottom:1.5px solid #9aa7b6;height:20px;margin-top:3px;}
+.marks{font-size:15pt;letter-spacing:1px;}
+.corrline{border-bottom:1.5px solid #9aa7b6;height:20px;margin-top:3px;}
+.clab{color:#8090a2;font-size:12.5pt;}
+
+.foot{position:absolute;left:14mm;right:14mm;bottom:9mm;text-align:center;
+color:var(--blue);font-size:11pt;font-weight:700;border-top:1.5px solid #d7dee8;padding-top:7px;}
+/* answers */
+.ansh{color:var(--navy);font-weight:800;font-size:12.5pt;border-left:4px solid var(--blue);
+padding-left:9px;margin:9px 0 3px;}
+.ans{font-size:12.5pt;padding:2.5px 2px;border-bottom:1px dotted #dad4d0;}
+.ans .num{color:var(--blue);font-weight:800;margin-right:5px;}
+.ans .k{color:#1a1a1a;font-weight:400;}
+.ans .note{color:var(--soft);font-size:10pt;}
+
+.sf, .sf .en{font-family:"Noto Sans CJK JP","DejaVu Sans",sans-serif;}
+
+/* ---- 声に出しながら書いてみよう ページ ---- */
+.wbanner{background:#2F855A;color:#fff;font-weight:800;font-size:15pt;padding:5px 18px 6px;border-radius:9px;display:inline-block;margin:2px 0 4px;}
+.wsub{font-size:12pt;color:#444;margin:0 0 12px;}
+.copyitem{margin-bottom:19px;}
+.copyen{font-size:17pt;font-weight:600;color:#1a1a1a;}
+.copyja{font-size:11.5pt;color:#5B6B82;margin-left:8px;}
+.copyline{border-bottom:1.5px solid #9fb0c3;height:48px;margin-top:6px;}
+
+/* ---- 発見ページ（見くらべ有り）を詰める ---- */
+.dcmp .tab{font-size:12.5pt;padding:3px 13px;margin:7px 0 4px;}
+.dcmp table.cmp{border-spacing:0 3px;}
+.dcmp td.lc,.dcmp td.rc{padding:3px 10px 4px;}
+.dcmp td.lc .en,.dcmp td.rc .en{font-size:13pt;line-height:1.2;}
+.dcmp .cja{font-size:10pt;margin:1px 0 0;}
+.dcmp .notice{padding:7px 14px 8px;margin:0;}
+.dcmp .notice .p{font-size:12.5pt;margin:0 0 11px;}
+.dcmp .rl{height:20px;}
+.dcmp .rulebox{padding:9px 15px 10px;margin:0;}
+.dcmp .rlead{font-size:12.5pt;margin:0 0 7px;}
+.dcmp .patt{gap:9px;margin:0 0 7px;}
+.dcmp .pchip{padding:3px 13px;font-size:12.5pt;}
+.dcmp ul.pts{margin:5px 0 0;font-size:12pt;}
+.dcmp .exrow{padding:1.5px 2px;}
+.dcmp .exen{font-size:15pt;}
+.dcmp .exja{font-size:10.5pt;}
+.dcmp .exnum{width:20px;height:20px;line-height:20px;font-size:10pt;margin-right:9px;}
+
+/* ---- 全体ルール：字余り（孤立2〜3字の改行）を防ぐ ---- */
+/* 日本語の行を自動で均等割り・末尾の泣き別れ(1〜3字だけ次行)を抑止 */
+.lead,.goal,.notice .p,.rlead,.exja,.rx-ja,.ctag,
+.copyja,.item,.ans,.htitle,.wsub{
+  text-wrap:pretty; line-break:strict; overflow-wrap:break-word;}
+td.lc,td.rc,th.lh,th.rh,.notice .p{ text-wrap:balance;}
+/* 見くらべセル等の和訳は1かたまりで扱い、2〜3字の泣き別れを防ぐ */
+.cja{ word-break:keep-all; overflow-wrap:normal;}
+.rx-ja{ word-break:auto-phrase; overflow-wrap:normal;}
+.exja{ word-break:auto-phrase; overflow-wrap:normal;}
+/* 日本語は「文節」単位で改行し、熟語の途中（動／詞）で割れないようにする */
+.lead,.goal,.rlead,.notice .p,.copyja,.item,.ans,.htitle,.wsub,.sec,.pts li{
+  word-break:auto-phrase;}
+.qrsvg{width:64px;height:64px;}
+.qrsvg svg{display:block;width:64px;height:64px;}
+
+:root{--navy:#1A365D;}
+</style><style>
+body{background:#EEF2F7;}
+.gbar{position:sticky;top:0;z-index:20;background:#1A365D;color:#fff;
+padding:8px 10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;
+font-family:"Inter","Noto Sans JP","Noto Sans CJK JP",sans-serif;font-size:14px;}
+.gbtn{border:none;border-radius:999px;padding:8px 16px;font-weight:800;cursor:pointer;
+font-size:14px;background:#FF9F1C;color:#3a2600;font-family:inherit;}
+.gbtn.ghost{background:rgba(255,255,255,.16);color:#fff;}
+.gbtn:disabled{opacity:.4;cursor:default;}
+.gtabs{display:flex;gap:6px;flex:1 0 100%;flex-wrap:nowrap;overflow-x:auto;
+padding:2px 0 4px;scrollbar-width:thin;}
+.gtab{flex:0 0 auto;}
+.gtab{border:1.5px solid rgba(255,255,255,.45);background:transparent;color:#fff;
+border-radius:999px;padding:5px 12px;font-weight:700;cursor:pointer;font-size:13px;
+font-family:inherit;}
+.gtab.on{background:#fff;color:#1A365D;border-color:#fff;}
+.ghint{opacity:.85;font-size:12.5px;}
+.gwrap{display:none;overflow:hidden;padding:10px 0 30px;}
+.gwrap.on{display:block;}
+.gscale{transform-origin:top left;margin:0 auto;}
+.page{box-shadow:0 2px 14px rgba(26,54,93,.18);background:#fff;margin:0 auto;}
+.say{cursor:pointer;border-radius:5px;transition:background .12s;}
+.say:hover{background:#FFF3BF;}
+.say.now{background:#C6F6D5;box-shadow:0 0 0 3px #9AE6B4;}
+.tab.say.now{box-shadow:0 0 0 3px #9AE6B4;}
+
+.gbar{background:#1A365D;}
+.gtab.on{color:#1A365D;}
+#tocbtn{background:rgba(255,255,255,.16);color:#fff;}
+.gnow{font-size:12.5px;opacity:.9;font-weight:700;white-space:nowrap;}
+/* ---- 目次 ---- */
+.gtoc{display:none;padding:16px 14px 46px;max-width:720px;margin:0 auto;
+font-family:"Inter","Noto Sans JP","Noto Sans CJK JP",sans-serif;}
+body.tocon .gtoc{display:block;}
+body.tocon .gwrap{display:none !important;}
+body.tocon .gtabs,body.tocon #pz,body.tocon #from0,body.tocon #ja,
+body.tocon .ghint,body.tocon #tocbtn,body.tocon .gnow{display:none;}
+.toch{font-size:19px;font-weight:800;color:#1A365D;margin:0 0 4px;}
+.tocsub{font-size:13px;color:#5a6b82;line-height:1.7;margin:0 0 14px;}
+.tocall{display:block;width:100%;border:none;border-radius:12px;cursor:pointer;
+background:#FF9F1C;color:#3a2600;font-weight:800;font-size:16px;padding:14px 10px;
+margin:0 0 16px;font-family:inherit;}
+.tocall:active{filter:brightness(.93);}
+.toclist{display:flex;flex-direction:column;gap:8px;}
+.tocrow{display:flex;align-items:center;gap:11px;width:100%;text-align:left;
+background:#fff;border:1.5px solid #DCE3EC;border-radius:12px;padding:11px 12px;
+cursor:pointer;font-family:inherit;color:#222b38;}
+.tocrow:active{background:#F4F7FA;}
+.tnum{flex:0 0 auto;min-width:38px;text-align:center;background:#1A365D;color:#fff;
+font-weight:800;font-size:14px;border-radius:8px;padding:5px 6px;}
+.tbody{flex:1 1 auto;min-width:0;}
+.tch{font-size:11.5px;color:#7a8798;line-height:1.4;}
+.ttl{font-size:15px;font-weight:700;line-height:1.4;margin-top:1px;}
+.tgo{flex:0 0 auto;color:#1A365D;font-size:17px;font-weight:800;opacity:.55;}
+.tocnote{font-size:12px;color:#8a97a6;line-height:1.8;margin-top:16px;}
+</style><style>.page{height:auto!important;min-height:297mm;padding-bottom:22mm}.foot{position:static!important;margin-top:10px}.gtoc .tch{font-size:11pt}</style></head><body><div class="gbar"><a class="yzhome" href="index.html" title="英語やるぞ！ホーム"><b>英</b>ホーム</a><button class="gbtn ghost" id="tocbtn">☰ 目次</button><button class="gbtn" id="from0">▶ この回をはじめから</button><button class="gbtn ghost" id="pz" disabled>⏸ 一時停止</button><span class="gnow" id="gnow"></span><span class="ghint">文をタップすると、それだけ流れます</span><span class="gtabs"><button class="gtab" data-i="0">01</button><button class="gtab" data-i="1">02</button><button class="gtab" data-i="2">03</button><button class="gtab" data-i="3">04</button><button class="gtab" data-i="4">05</button><button class="gtab" data-i="5">06</button><button class="gtab" data-i="6">07</button><button class="gtab" data-i="7">08</button><button class="gtab" data-i="8">09</button><button class="gtab" data-i="9">10</button><button class="gtab" data-i="10">11</button><button class="gtab" data-i="11">12</button><button class="gtab" data-i="12">13</button><button class="gtab" data-i="13">14</button><button class="gtab" data-i="14">15</button><button class="gtab" data-i="15">16</button><button class="gtab" data-i="16">17</button><button class="gtab" data-i="17">18</button><button class="gtab" data-i="18">19</button><button class="gtab" data-i="19">20</button></span></div><div class="gtoc" id="toc"><div class="toch">中2　文法プリント（暗唱例文）</div><div class="tocsub">やりたい単元をえらんでね。えらんだ単元を3回くりかえしたら、自動でつぎの単元にすすみます。</div><button class="tocall" id="playall">▶ はじめから　ぜんぶ流す</button><div class="toclist"><button class="tocrow" data-i="0"><span class="tnum">01</span><span class="tbody"><div class="tch">中2</div><div class="ttl">未来形(will)（1/2）</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="1"><span class="tnum">02</span><span class="tbody"><div class="tch">中2</div><div class="ttl">未来形(will)（2/2）</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="2"><span class="tnum">03</span><span class="tbody"><div class="tch">中2</div><div class="ttl">未来形(be going to)（1/2）</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="3"><span class="tnum">04</span><span class="tbody"><div class="tch">中2</div><div class="ttl">未来形(be going to)（2/2）</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="4"><span class="tnum">05</span><span class="tbody"><div class="tch">中2</div><div class="ttl">助動詞(must / have to)（1/2）</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="5"><span class="tnum">06</span><span class="tbody"><div class="tch">中2</div><div class="ttl">助動詞(must / have to)（2/2）</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="6"><span class="tnum">07</span><span class="tbody"><div class="tch">中2</div><div class="ttl">助動詞(should / may)（1/2）</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="7"><span class="tnum">08</span><span class="tbody"><div class="tch">中2</div><div class="ttl">助動詞(should / may)（2/2）</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="8"><span class="tnum">09</span><span class="tbody"><div class="tch">中2</div><div class="ttl">不定詞(名詞的用法)</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="9"><span class="tnum">10</span><span class="tbody"><div class="tch">中2</div><div class="ttl">不定詞(副詞的用法)</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="10"><span class="tnum">11</span><span class="tbody"><div class="tch">中2</div><div class="ttl">不定詞(形容詞的用法)</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="11"><span class="tnum">12</span><span class="tbody"><div class="tch">中2</div><div class="ttl">動名詞</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="12"><span class="tnum">13</span><span class="tbody"><div class="tch">中2</div><div class="ttl">接続詞(when / if / because / that / though)</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="13"><span class="tnum">14</span><span class="tbody"><div class="tch">中2</div><div class="ttl">比較級</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="14"><span class="tnum">15</span><span class="tbody"><div class="tch">中2</div><div class="ttl">最上級</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="15"><span class="tnum">16</span><span class="tbody"><div class="tch">中2</div><div class="ttl">as...as(原級)</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="16"><span class="tnum">17</span><span class="tbody"><div class="tch">中2</div><div class="ttl">受け身（1/2）</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="17"><span class="tnum">18</span><span class="tbody"><div class="tch">中2</div><div class="ttl">受け身（2/2）</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="18"><span class="tnum">19</span><span class="tbody"><div class="tch">中2</div><div class="ttl">SVOO(give / show / tell + 人 + 物)</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="19"><span class="tnum">20</span><span class="tbody"><div class="tch">中2</div><div class="ttl">SVOC(call / make + O + C)</div></span><span class="tgo">▶</span></button></div><div class="tocnote">とちゅうでやめたいときは「⏸ 一時停止」。目次にもどるときは左上の「☰ 目次」をおしてください。</div></div><div class="gwrap" data-i="0"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">01</span><div><div class="chlabel">中2</div><div class="htitle">未来形(will)（1/2）</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">I will go to the park tomorrow.</span></span><span class="exlead"></span><span class="exja">私は明日、公園に行くでしょう。</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">He will be busy next week.</span></span><span class="exlead"></span><span class="exja">彼は来週、忙しいでしょう。</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">We will arrive there soon.</span></span><span class="exlead"></span><span class="exja">私たちはすぐにそこに着くでしょう。</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">She will come here tomorrow.</span></span><span class="exlead"></span><span class="exja">彼女は明日、ここに来るでしょう。</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">I will get up early tomorrow.</span></span><span class="exlead"></span><span class="exja">私は明日、早く起きるでしょう。</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">Will you come to school tomorrow?</span></span><span class="exlead"></span><span class="exja">あなたは明日、学校に来ますか。</span></div><div class="exrow"><span class="exnum">7</span><span class="exen"><span class="en">Will she come to the party?</span></span><span class="exlead"></span><span class="exja">彼女はパーティーに来るでしょうか。</span></div><div class="foot">中2　文法プリント（暗唱例文）　01　未来形(will)（1/2）</div></section></div></div><div class="gwrap" data-i="1"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">02</span><div><div class="chlabel">中2</div><div class="htitle">未来形(will)（2/2）</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">Will it rain tomorrow?</span></span><span class="exlead"></span><span class="exja">明日は雨が降るでしょうか。</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">Will they visit Tokyo next week?</span></span><span class="exlead"></span><span class="exja">彼らは来週、東京を訪れるでしょうか。</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">What time will you come?</span></span><span class="exlead"></span><span class="exja">あなたは何時に来ますか。</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">I will not watch TV today.</span></span><span class="exlead"></span><span class="exja">私は今日、テレビを見ないでしょう。</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">They will not be busy tomorrow.</span></span><span class="exlead"></span><span class="exja">彼らは明日、忙しくないでしょう。</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">She will not cook tonight.</span></span><span class="exlead"></span><span class="exja">彼女は今夜、料理をしないでしょう。</span></div><div class="exrow"><span class="exnum">7</span><span class="exen"><span class="en">We will not go to school tomorrow.</span></span><span class="exlead"></span><span class="exja">私たちは明日、学校に行かないでしょう。</span></div><div class="foot">中2　文法プリント（暗唱例文）　02　未来形(will)（2/2）</div></section></div></div><div class="gwrap" data-i="2"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">03</span><div><div class="chlabel">中2</div><div class="htitle">未来形(be going to)（1/2）</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">I am going to do my homework tonight.</span></span><span class="exlead"></span><span class="exja">私は今晩、宿題をするつもりです。</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">He is going to visit Tokyo next month.</span></span><span class="exlead"></span><span class="exja">彼は来月、東京を訪れるつもりです。</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">We are going to swim tomorrow.</span></span><span class="exlead"></span><span class="exja">私たちは明日、泳ぐつもりです。</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">She is going to meet her friend next week.</span></span><span class="exlead"></span><span class="exja">彼女は来週、友達に会うつもりです。</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">I am going to clean my room this afternoon.</span></span><span class="exlead"></span><span class="exja">私は今日の午後、部屋を掃除するつもりです。</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">What are you going to do today?</span></span><span class="exlead"></span><span class="exja">あなたは今日、何をするつもりですか。</span></div><div class="exrow"><span class="exnum">7</span><span class="exen"><span class="en">Is she going to buy a new bag?</span></span><span class="exlead"></span><span class="exja">彼女は新しいカバンを買うつもりですか。</span></div><div class="foot">中2　文法プリント（暗唱例文）　03　未来形(be going to)（1/2）</div></section></div></div><div class="gwrap" data-i="3"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">04</span><div><div class="chlabel">中2</div><div class="htitle">未来形(be going to)（2/2）</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">Are they going to play soccer tomorrow?</span></span><span class="exlead"></span><span class="exja">彼らは明日、サッカーをするつもりですか。</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">Where are you going to go this summer?</span></span><span class="exlead"></span><span class="exja">あなたは夏休みにどこへ行くつもりですか。</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">I am not going to go out today.</span></span><span class="exlead"></span><span class="exja">私は今日、出かけるつもりはありません。</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">They are not going to study tonight.</span></span><span class="exlead"></span><span class="exja">彼らは今夜、勉強するつもりはありません。</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">He is not going to work today.</span></span><span class="exlead"></span><span class="exja">彼は今日、働くつもりはありません。</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">We are not going to be late tomorrow.</span></span><span class="exlead"></span><span class="exja">私たちは明日、遅れるつもりはありません。</span></div><div class="foot">中2　文法プリント（暗唱例文）　04　未来形(be going to)（2/2）</div></section></div></div><div class="gwrap" data-i="4"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">05</span><div><div class="chlabel">中2</div><div class="htitle">助動詞(must / have to)（1/2）</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">I must do my homework now.</span></span><span class="exlead"></span><span class="exja">私は今、宿題をしなければなりません。</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">He has to get up early every day.</span></span><span class="exlead"></span><span class="exja">彼は毎日、早く起きなければなりません。</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">We must be quiet.</span></span><span class="exlead"></span><span class="exja">私たちは静かにしなければなりません。</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">You must run fast.</span></span><span class="exlead"></span><span class="exja">あなたは速く走らなければなりません。</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">She has to study English every day.</span></span><span class="exlead"></span><span class="exja">彼女は毎日、英語を勉強しなければなりません。</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">We have to go to school early tomorrow.</span></span><span class="exlead"></span><span class="exja">私たちは明日、早く学校に行かなければなりません。</span></div><div class="exrow"><span class="exnum">7</span><span class="exen"><span class="en">Do I have to go now?</span></span><span class="exlead"></span><span class="exja">私は今、行かなければなりませんか。</span></div><div class="foot">中2　文法プリント（暗唱例文）　05　助動詞(must / have to)（1/2）</div></section></div></div><div class="gwrap" data-i="5"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">06</span><div><div class="chlabel">中2</div><div class="htitle">助動詞(must / have to)（2/2）</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">Does he have to work today?</span></span><span class="exlead"></span><span class="exja">彼は今日、働かなければなりませんか。</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">Do we have to take off our shoes here?</span></span><span class="exlead"></span><span class="exja">私たちはここで靴を脱がなければなりませんか。</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">You do not have to go to school today.</span></span><span class="exlead"></span><span class="exja">あなたは今日、学校に行く必要はありません。</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">She does not have to hurry.</span></span><span class="exlead"></span><span class="exja">彼女は急ぐ必要はありません。</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">You must not take pictures here.</span></span><span class="exlead"></span><span class="exja">ここで写真を撮ってはいけません。</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">You must not run in the hall.</span></span><span class="exlead"></span><span class="exja">廊下を走ってはいけません。</span></div><div class="foot">中2　文法プリント（暗唱例文）　06　助動詞(must / have to)（2/2）</div></section></div></div><div class="gwrap" data-i="6"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">07</span><div><div class="chlabel">中2</div><div class="htitle">助動詞(should / may)（1/2）</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">You should study more.</span></span><span class="exlead"></span><span class="exja">あなたはもっと勉強するべきです。</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">He should go to the doctor.</span></span><span class="exlead"></span><span class="exja">彼は医者に行くべきです。</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">It may rain.</span></span><span class="exlead"></span><span class="exja">雨が降るかもしれません。</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">We should go to bed early.</span></span><span class="exlead"></span><span class="exja">私たちは早く寝るべきです。</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">He may come today.</span></span><span class="exlead"></span><span class="exja">彼は今日、来るかもしれません。</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">You may sit here.</span></span><span class="exlead"></span><span class="exja">ここに座ってもいいですよ。</span></div><div class="foot">中2　文法プリント（暗唱例文）　07　助動詞(should / may)（1/2）</div></section></div></div><div class="gwrap" data-i="7"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">08</span><div><div class="chlabel">中2</div><div class="htitle">助動詞(should / may)（2/2）</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">May I take a picture here?</span></span><span class="exlead"></span><span class="exja">ここで写真を撮ってもいいですか。</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">What should I do?</span></span><span class="exlead"></span><span class="exja">私は何をするべきですか。</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">May I open the window?</span></span><span class="exlead"></span><span class="exja">窓を開けてもいいですか。</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">You should not get angry.</span></span><span class="exlead"></span><span class="exja">あなたは怒るべきではありません。</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">We should not be late.</span></span><span class="exlead"></span><span class="exja">私たちは遅れるべきではありません。</span></div><div class="foot">中2　文法プリント（暗唱例文）　08　助動詞(should / may)（2/2）</div></section></div></div><div class="gwrap" data-i="8"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">09</span><div><div class="chlabel">中2</div><div class="htitle">不定詞(名詞的用法)</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">I want to be a doctor.</span></span><span class="exlead"></span><span class="exja">私は医者になりたいです。</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">She likes to play the piano.</span></span><span class="exlead"></span><span class="exja">彼女はピアノを弾くことが好きです。</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">To study English is important.</span></span><span class="exlead"></span><span class="exja">英語を勉強することは大切です。</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">I like to speak English.</span></span><span class="exlead"></span><span class="exja">私は英語を話すことが好きです。</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">His dream is to be a singer.</span></span><span class="exlead"></span><span class="exja">彼の夢は歌手になることです。</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">I want to visit Tokyo.</span></span><span class="exlead"></span><span class="exja">私は東京を訪れたいです。</span></div><div class="foot">中2　文法プリント（暗唱例文）　09　不定詞(名詞的用法)</div></section></div></div><div class="gwrap" data-i="9"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">10</span><div><div class="chlabel">中2</div><div class="htitle">不定詞(副詞的用法)</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">I go to the library to do my homework.</span></span><span class="exlead"></span><span class="exja">私は宿題をするために図書館へ行きます。</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">He was surprised to hear the news.</span></span><span class="exlead"></span><span class="exja">彼はその知らせを聞いて驚きました。</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">I am happy to see you.</span></span><span class="exlead"></span><span class="exja">私はあなたに会えてうれしいです。</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">I went to the store to buy a book.</span></span><span class="exlead"></span><span class="exja">私は本を買うために店へ行きました。</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">She was sad to read the letter.</span></span><span class="exlead"></span><span class="exja">彼女はその手紙を読んで悲しくなりました。</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">I will go to America to study English.</span></span><span class="exlead"></span><span class="exja">私は英語を勉強するためにアメリカへ行きます。</span></div><div class="foot">中2　文法プリント（暗唱例文）　10　不定詞(副詞的用法)</div></section></div></div><div class="gwrap" data-i="10"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">11</span><div><div class="chlabel">中2</div><div class="htitle">不定詞(形容詞的用法)</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">I need something to drink.</span></span><span class="exlead"></span><span class="exja">私には何か飲むものが必要です。</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">He has many books to read.</span></span><span class="exlead"></span><span class="exja">彼は読むべき本をたくさん持っています。</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">Is there anything to eat?</span></span><span class="exlead"></span><span class="exja">何か食べるものはありますか。</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">I have a lot of homework to do.</span></span><span class="exlead"></span><span class="exja">私にはする宿題がたくさんあります。</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">I want a place to sit.</span></span><span class="exlead"></span><span class="exja">私は座る場所がほしいです。</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">She has no friends to talk with.</span></span><span class="exlead"></span><span class="exja">彼女には話す友達がいません。</span></div><div class="foot">中2　文法プリント（暗唱例文）　11　不定詞(形容詞的用法)</div></section></div></div><div class="gwrap" data-i="11"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">12</span><div><div class="chlabel">中2</div><div class="htitle">動名詞</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">I like listening to music.</span></span><span class="exlead"></span><span class="exja">私は音楽を聞くことが好きです。</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">He enjoys reading books.</span></span><span class="exlead"></span><span class="exja">彼は本を読むことを楽しみます。</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">Swimming is fun.</span></span><span class="exlead"></span><span class="exja">泳ぐことは楽しいです。</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">I finished doing my homework.</span></span><span class="exlead"></span><span class="exja">私は宿題をし終えました。</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">She is good at cooking.</span></span><span class="exlead"></span><span class="exja">彼女は料理することが得意です。</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">I like drawing pictures.</span></span><span class="exlead"></span><span class="exja">私は絵を描くことが好きです。</span></div><div class="exrow"><span class="exnum">7</span><span class="exen"><span class="en">They started singing.</span></span><span class="exlead"></span><span class="exja">彼らは歌い始めました。</span></div><div class="exrow"><span class="exnum">8</span><span class="exen"><span class="en">Please stop talking.</span></span><span class="exlead"></span><span class="exja">話すのをやめてください。</span></div><div class="foot">中2　文法プリント（暗唱例文）　12　動名詞</div></section></div></div><div class="gwrap" data-i="12"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">13</span><div><div class="chlabel">中2</div><div class="htitle">接続詞(when / if / because / that / though)</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">When I came home, my mother was cooking.</span></span><span class="exlead"></span><span class="exja">私が家に帰ったとき、母は料理をしていました。</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">If it is sunny tomorrow, we will go to the park.</span></span><span class="exlead"></span><span class="exja">もし明日晴れたら、私たちは公園に行きます。</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">Because I was tired, I went to bed early.</span></span><span class="exlead"></span><span class="exja">私は疲れていたので、早く寝ました。</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">I think that he is kind.</span></span><span class="exlead"></span><span class="exja">私は彼が親切だと思います。</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">Though he is young, he is very smart.</span></span><span class="exlead"></span><span class="exja">彼は若いけれども、とても賢いです。</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">When I was young, I often went swimming.</span></span><span class="exlead"></span><span class="exja">私が若かったとき、よく泳ぎに行きました。</span></div><div class="exrow"><span class="exnum">7</span><span class="exen"><span class="en">If you are busy, I will help you.</span></span><span class="exlead"></span><span class="exja">もし忙しいなら、私が手伝います。</span></div><div class="exrow"><span class="exnum">8</span><span class="exen"><span class="en">I ate bread because I was hungry.</span></span><span class="exlead"></span><span class="exja">私はお腹がすいていたので、パンを食べました。</span></div><div class="exrow"><span class="exnum">9</span><span class="exen"><span class="en">I know that he is a doctor.</span></span><span class="exlead"></span><span class="exja">私は彼が医者だと知っています。</span></div><div class="exrow"><span class="exnum">10</span><span class="exen"><span class="en">Though it was raining, we went out.</span></span><span class="exlead"></span><span class="exja">雨が降っていたけれども、私たちは出かけました。</span></div><div class="foot">中2　文法プリント（暗唱例文）　13　接続詞(when / if / because / that / though)</div></section></div></div><div class="gwrap" data-i="13"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">14</span><div><div class="chlabel">中2</div><div class="htitle">比較級</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">I am taller than my brother.</span></span><span class="exlead"></span><span class="exja">私は兄より背が高いです。</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">This book is more interesting than that one.</span></span><span class="exlead"></span><span class="exja">この本はあの本より面白いです。</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">Today is hotter than yesterday.</span></span><span class="exlead"></span><span class="exja">今日は昨日より暑いです。</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">He swims better than I do.</span></span><span class="exlead"></span><span class="exja">彼は私より上手に泳ぎます。</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">This dog is smaller than that dog.</span></span><span class="exlead"></span><span class="exja">この犬はあの犬より小さいです。</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">My sister gets up earlier than I do.</span></span><span class="exlead"></span><span class="exja">私の姉は私より早く起きます。</span></div><div class="exrow"><span class="exnum">7</span><span class="exen"><span class="en">Which do you like better, dogs or cats?</span></span><span class="exlead"></span><span class="exja">あなたは犬とねこでは、どちらが好きですか。</span></div><div class="exrow"><span class="exnum">8</span><span class="exen"><span class="en">She has more books than I do.</span></span><span class="exlead"></span><span class="exja">彼女は私より多くの本を持っています。</span></div><div class="foot">中2　文法プリント（暗唱例文）　14　比較級</div></section></div></div><div class="gwrap" data-i="14"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">15</span><div><div class="chlabel">中2</div><div class="htitle">最上級</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">He is the tallest in his class.</span></span><span class="exlead"></span><span class="exja">彼はクラスでいちばん背が高いです。</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">This is the most expensive watch in this store.</span></span><span class="exlead"></span><span class="exja">これはこの店でいちばん高い時計です。</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">Mt. Fuji is the highest mountain in Japan.</span></span><span class="exlead"></span><span class="exja">富士山は日本でいちばん高い山です。</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">She studies the hardest.</span></span><span class="exlead"></span><span class="exja">彼女はいちばん一生懸命に勉強します。</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">She sings the best in her class.</span></span><span class="exlead"></span><span class="exja">彼女はクラスでいちばん上手に歌います。</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">Which season do you like the best?</span></span><span class="exlead"></span><span class="exja">あなたはどの季節がいちばん好きですか。</span></div><div class="exrow"><span class="exnum">7</span><span class="exen"><span class="en">He is the tallest of the three.</span></span><span class="exlead"></span><span class="exja">彼は3人の中でいちばん背が高いです。</span></div><div class="exrow"><span class="exnum">8</span><span class="exen"><span class="en">Today is the hottest day of the year.</span></span><span class="exlead"></span><span class="exja">今日は一年でいちばん暑い日です。</span></div><div class="foot">中2　文法プリント（暗唱例文）　15　最上級</div></section></div></div><div class="gwrap" data-i="15"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">16</span><div><div class="chlabel">中2</div><div class="htitle">as...as(原級)</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">I am as tall as my brother.</span></span><span class="exlead"></span><span class="exja">私は兄と同じくらい背が高いです。</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">This book is not as interesting as that one.</span></span><span class="exlead"></span><span class="exja">この本はあの本ほど面白くありません。</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">She sings as well as I do.</span></span><span class="exlead"></span><span class="exja">彼女は私と同じくらい上手に歌います。</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">He runs as fast as I do.</span></span><span class="exlead"></span><span class="exja">彼は私と同じくらい速く走ります。</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">This box is not as heavy as that one.</span></span><span class="exlead"></span><span class="exja">この箱はあの箱ほど重くありません。</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">Please come as soon as you can.</span></span><span class="exlead"></span><span class="exja">できるだけ早く来てください。</span></div><div class="foot">中2　文法プリント（暗唱例文）　16　as...as(原級)</div></section></div></div><div class="gwrap" data-i="16"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">17</span><div><div class="chlabel">中2</div><div class="htitle">受け身（1/2）</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">This room is cleaned every day.</span></span><span class="exlead"></span><span class="exja">この部屋は毎日、掃除されます。</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">This book is read by many people.</span></span><span class="exlead"></span><span class="exja">この本は多くの人々に読まれています。</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">These desks were made yesterday.</span></span><span class="exlead"></span><span class="exja">これらの机は昨日、作られました。</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">This car is made in Japan.</span></span><span class="exlead"></span><span class="exja">この車は日本で作られています。</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">English is spoken all over the world.</span></span><span class="exlead"></span><span class="exja">英語は世界中で話されています。</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">Is this song loved by young people?</span></span><span class="exlead"></span><span class="exja">この歌は若者に愛されていますか。</span></div><div class="exrow"><span class="exnum">7</span><span class="exen"><span class="en">When was this house built?</span></span><span class="exlead"></span><span class="exja">この家はいつ建てられましたか。</span></div><div class="foot">中2　文法プリント（暗唱例文）　17　受け身（1/2）</div></section></div></div><div class="gwrap" data-i="17"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">18</span><div><div class="chlabel">中2</div><div class="htitle">受け身（2/2）</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">Is English used here?</span></span><span class="exlead"></span><span class="exja">英語はここで使われていますか。</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">Who was this picture painted by?</span></span><span class="exlead"></span><span class="exja">この絵はだれによって描かれましたか。</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">This window is not closed.</span></span><span class="exlead"></span><span class="exja">この窓は閉められていません。</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">The letter was not written by him.</span></span><span class="exlead"></span><span class="exja">その手紙は彼によって書かれませんでした。</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">These books are not sold in Japan.</span></span><span class="exlead"></span><span class="exja">これらの本は日本では売られていません。</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">The window was not broken yesterday.</span></span><span class="exlead"></span><span class="exja">その窓は昨日、割られませんでした。</span></div><div class="foot">中2　文法プリント（暗唱例文）　18　受け身（2/2）</div></section></div></div><div class="gwrap" data-i="18"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">19</span><div><div class="chlabel">中2</div><div class="htitle">SVOO(give / show / tell + 人 + 物)</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">I will give him a present.</span></span><span class="exlead"></span><span class="exja">私は彼にプレゼントをあげます。</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">She showed us a picture.</span></span><span class="exlead"></span><span class="exja">彼女は私たちに写真を見せてくれました。</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">The teacher told us an important thing.</span></span><span class="exlead"></span><span class="exja">先生は私たちに大切なことを教えてくれました。</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">My father bought me a new bike.</span></span><span class="exlead"></span><span class="exja">父は私に新しい自転車を買ってくれました。</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">My mother made me a lunch box.</span></span><span class="exlead"></span><span class="exja">母は私にお弁当を作ってくれました。</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">I sent her a letter.</span></span><span class="exlead"></span><span class="exja">私は彼女に手紙を送りました。</span></div><div class="exrow"><span class="exnum">7</span><span class="exen"><span class="en">He sang us a song.</span></span><span class="exlead"></span><span class="exja">彼は私たちに歌を歌ってくれました。</span></div><div class="exrow"><span class="exnum">8</span><span class="exen"><span class="en">Please show me the book.</span></span><span class="exlead"></span><span class="exja">私にその本を見せてください。</span></div><div class="foot">中2　文法プリント（暗唱例文）　19　SVOO(give / show / tell + 人 + 物)</div></section></div></div><div class="gwrap" data-i="19"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">20</span><div><div class="chlabel">中2</div><div class="htitle">SVOC(call / make + O + C)</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">We call him Ken.</span></span><span class="exlead"></span><span class="exja">私たちは彼をケンと呼びます。</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">The news made her sad.</span></span><span class="exlead"></span><span class="exja">その知らせは彼女を悲しくさせました。</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">Music makes me happy.</span></span><span class="exlead"></span><span class="exja">音楽は私を幸せにします。</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">We call the cat Tama.</span></span><span class="exlead"></span><span class="exja">私たちはその猫をタマと呼びます。</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">The song made him famous.</span></span><span class="exlead"></span><span class="exja">その歌は彼を有名にしました。</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">Please keep this room clean.</span></span><span class="exlead"></span><span class="exja">この部屋を清潔に保ってください。</span></div><div class="foot">中2　文法プリント（暗唱例文）　20　SVOC(call / make + O + C)</div></section></div></div><script>const RATE=0.68, GAP=2000, RATEJA=0.9;
+let voiceEN=null, voiceJP=null;
+function loadVoices(){const v=speechSynthesis.getVoices();
+  const pref=["Google US English","Microsoft Aria","Samantha","Google UK English Female","Karen"];
+  const en=v.filter(x=>/^en([-_]|$)/i.test(x.lang));
+  voiceEN=pref.map(p=>en.find(x=>x.name.includes(p))).find(Boolean)||en.find(x=>x.lang==="en-US")||en[0]||null;
+  const jp=["Google 日本語","Kyoko (Enhanced)","O-ren (Enhanced)","Kyoko","O-ren","Hattori","Microsoft Nanami Online","Microsoft Nanami","Microsoft Ayumi","Otoya","Google Japanese"];
+  const ja=v.filter(x=>/^ja/i.test(x.lang));
+  voiceJP=jp.map(p=>ja.find(x=>x.name===p)||ja.find(x=>x.name.includes(p))).find(Boolean)||ja.find(x=>!x.localService)||ja[0]||null;}
+try{loadVoices();speechSynthesis.onvoiceschanged=loadVoices;}catch(e){}
+let wd=null;
+function say(text,lang,done){
+  clearTimeout(wd);
+  let fired=false;
+  const fin=()=>{if(fired)return;fired=true;clearTimeout(wd);if(done)done();};
+  try{const u=new SpeechSynthesisUtterance(text);
+    if(lang==="ja"){u.lang="ja-JP";if(voiceJP)u.voice=voiceJP;u.rate=RATEJA;}
+    else{u.lang="en-US";if(voiceEN)u.voice=voiceEN;u.rate=RATE;}
+    u.onend=fin;u.onerror=fin;speechSynthesis.speak(u);
+    wd=setTimeout(fin,Math.max(3500,text.length*140));   // 読み上げが返ってこない時の保険
+  }catch(e){fin();}}
+function clean(el){const c=el.cloneNode(true);
+  c.querySelectorAll(".cja,.pja,.tja,.rx-ja,.exja,.exnum,.exlead,.rx-lead").forEach(x=>x.remove());
+  return c.textContent.replace(/\s+/g," ").trim();}
+function build(wrap){
+  const items=[];
+  const sel=".tab,.cmp td.lc,.cmp td.rc,.pex,.pchip,.ruleex .rx-en,table.be td.en,.exrow .exen";
+  wrap.querySelectorAll(sel).forEach(el=>{
+    const isTab=el.classList.contains("tab");
+    const t=clean(el);
+    if(!t) return;
+    if(!isTab && !/[A-Za-z]/.test(t)) return;
+    if(isTab && /気づい/.test(t)) return;   // 「気づいたことを書こう」は読み上げない
+    el.classList.add("say");
+    // 見出しの①②などの丸数字は読み上げない
+    el.dataset.say=isTab?t.replace(/^[\u2460-\u2473\u3251-\u325F]\s*/,""):t;
+    el.dataset.lang=isTab?"ja":"en";
+    el.onclick=()=>{stop();mark(el);
+      setTimeout(()=>say(el.dataset.say,el.dataset.lang,
+                         ()=>el.classList.remove("now")),80);};
+    items.push(el);});
+  return items;}
+
+const ROUNDS=3, LABELS=["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"];
+let seq=[],idx=0,running=false,paused=false,timer=null,rnd=0,chain=false;
+function mark(el){document.querySelectorAll(".say.now").forEach(x=>x.classList.remove("now"));
+  if(el){el.classList.add("now");el.scrollIntoView({block:"center",behavior:"smooth"});}}
+function setBtn(){const b=document.getElementById("pz");
+  b.textContent=paused?"▶ つづきから":"⏸ 一時停止";b.disabled=!running;
+  const n=document.getElementById("gnow");
+  n.textContent=running?(LABELS[curi]+"　"+(rnd+1)+"周目/"+ROUNDS):"";}
+function stop(){running=false;paused=false;chain=false;rnd=0;
+  clearTimeout(timer);clearTimeout(wd);speechSynthesis.cancel();mark(null);setBtn();}
+function step(){
+  if(!running||paused) return;
+  if(idx>=seq.length){
+    if(chain){
+      rnd++;
+      if(rnd<ROUNDS){idx=0;setBtn();timer=setTimeout(step,GAP);return;}
+      if(curi+1<wraps.length){playUnit(curi+1);return;}
+    }
+    stop();return;}
+  const el=seq[idx];mark(el);
+  say(el.dataset.say,el.dataset.lang||"en",()=>{
+    if(!running||paused) return;
+    idx++;timer=setTimeout(step,GAP);});}
+function playUnit(i){
+  stop();show(i);
+  seq=cur().items;idx=0;rnd=0;chain=true;running=true;paused=false;setBtn();
+  timer=setTimeout(step,420);}
+const wraps=[...document.querySelectorAll(".gwrap")];
+const tabs=[...document.querySelectorAll(".gtab")];
+const built=wraps.map(w=>({w,items:null}));
+let curi=0;
+function cur(){const c=built[curi];if(!c.items)c.items=build(c.w);return c;}
+function fit(){wraps.forEach(w=>{if(w.clientWidth<=0) return;
+  const s=w.querySelector(".gscale");
+  const pw=s.firstElementChild.offsetWidth||794;
+  const k=Math.min(1,(w.clientWidth-8)/pw);
+  s.style.transform="scale("+k+")";
+  s.style.height=(s.firstElementChild.offsetHeight*k)+"px";
+  s.style.width=pw+"px";});}
+function show(i){curi=i;
+  document.body.classList.remove("tocon");
+  wraps.forEach((w,j)=>w.classList.toggle("on",i===j));
+  tabs.forEach((t,j)=>t.classList.toggle("on",i===j));
+  const tb=tabs[i].parentNode; tb.scrollLeft=tabs[i].offsetLeft-tb.clientWidth/2+30;
+  try{history.replaceState(null,"","#p"+(i+1));}catch(e){}
+  cur();fit();window.scrollTo(0,0);}
+function showToc(){stop();document.body.classList.add("tocon");
+  wraps.forEach(w=>w.classList.remove("on"));
+  try{history.replaceState(null,"","#toc");}catch(e){}
+  window.scrollTo(0,0);}
+tabs.forEach((t,i)=>t.onclick=()=>{stop();show(i);});
+document.querySelectorAll(".tocrow").forEach(r=>{
+  r.onclick=()=>playUnit(+r.dataset.i);});
+document.getElementById("playall").onclick=()=>playUnit(0);
+document.getElementById("tocbtn").onclick=showToc;
+document.getElementById("from0").onclick=()=>playUnit(curi);
+document.getElementById("pz").onclick=()=>{
+  if(!running) return;
+  paused=!paused;
+  if(paused){clearTimeout(timer);clearTimeout(wd);speechSynthesis.cancel();}
+  else{timer=setTimeout(step,120);}
+  setBtn();};
+addEventListener("resize",fit);
+addEventListener("hashchange",()=>{const m=(location.hash||"").match(/^#p(\d+)$/);
+  if(m){const n=+m[1]-1;if(n>=0&&n<wraps.length&&n!==curi){stop();show(n);}}
+  else if((location.hash||"")==="#toc"){showToc();}});
+(function(){const m=(location.hash||"").match(/^#p(\d+)$/);
+  if(m&&+m[1]>=1&&+m[1]<=wraps.length){show(+m[1]-1);}else{showToc();}})();
+
+</script><script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){});});}</script></body></html>
