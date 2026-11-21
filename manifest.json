@@ -1,0 +1,17 @@
+{
+  "name": "英語やるぞ！",
+  "short_name": "英語やるぞ！",
+  "description": "英検の単語プリント・文法プリントの音読ページ",
+  "lang": "ja",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#F2F4F8",
+  "theme_color": "#D1095A",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
