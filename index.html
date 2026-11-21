@@ -15,7 +15,7 @@
 :root{
   --bg:#F2F4F8; --card:#ffffff; --ink:#1F2733; --sub:#64748B;
   --line:#DCE3EC; --accent:#D1095A; --accent2:#F03E0C;
-  --star:#F6A609;
+  --star:#F6A609; --tango:#2B6CB0; --bunpo:#2F855A;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
@@ -47,28 +47,30 @@ h1{font-size:1.24rem;margin:0;letter-spacing:.5px;font-weight:800;}
 .hello button{background:none;border:none;color:#fff;opacity:.8;font:inherit;
   text-decoration:underline;padding:0 0 0 8px;cursor:pointer;}
 
-/* ---- 級カード ---- */
+/* ---- 一覧 ---- */
 .sec{font-size:.78rem;font-weight:700;color:var(--sub);margin:0 2px 7px;
   letter-spacing:.08em;}
 .card{background:var(--card);border:1.5px solid var(--line);border-radius:16px;
-  padding:13px 14px 14px;margin-bottom:12px;
+  padding:11px 12px 12px;margin-bottom:11px;
   box-shadow:0 1px 2px rgba(16,24,40,.04);}
-.card.fav{border-color:var(--star);box-shadow:0 2px 10px rgba(246,166,9,.18);}
-.ctop{display:flex;align-items:center;gap:10px;margin-bottom:11px;}
-.badge{flex:0 0 auto;color:#fff;font-weight:800;font-size:.95rem;
-  padding:5px 14px;border-radius:9px;}
-.favmark{font-size:.72rem;font-weight:700;color:var(--star);}
-.star{margin-left:auto;background:none;border:none;font-size:1.5rem;line-height:1;
-  cursor:pointer;padding:2px 2px;color:#C8D1DC;transition:transform .12s;}
-.star[aria-pressed="true"]{color:var(--star);}
-.star:active{transform:scale(.86);}
-.btns{display:flex;gap:9px;}
-.b{flex:1 1 0;display:flex;flex-direction:column;align-items:center;gap:2px;
-  text-decoration:none;border-radius:11px;padding:11px 8px 12px;color:#fff;
-  font-weight:700;font-size:1rem;}
-.b small{font-size:.7rem;font-weight:600;opacity:.85;}
-.b:active{filter:brightness(.92);}
-.b.tango{background:#2B6CB0;} .b.bunpo{background:#2F855A;}
+.card.favcard{border-color:var(--star);box-shadow:0 2px 10px rgba(246,166,9,.16);}
+.badge{display:inline-block;color:#fff;font-weight:800;font-size:.88rem;
+  padding:4px 12px;border-radius:8px;margin-bottom:9px;}
+.row{display:flex;align-items:stretch;gap:8px;margin-bottom:7px;}
+.row:last-child{margin-bottom:0;}
+.go{flex:1 1 auto;min-width:0;display:flex;align-items:center;gap:10px;
+  text-decoration:none;color:#fff;border-radius:11px;padding:11px 13px;}
+.go:active{filter:brightness(.92);}
+.go.tango{background:var(--tango);} .go.bunpo{background:var(--bunpo);}
+.kind{font-weight:800;font-size:1.02rem;}
+.sub2{font-size:.74rem;opacity:.85;margin-left:auto;}
+.lvtag{font-size:.78rem;font-weight:700;opacity:.9;
+  border:1px solid rgba(255,255,255,.5);border-radius:6px;padding:1px 7px;}
+.star{flex:0 0 auto;width:46px;background:none;border:1.5px solid var(--line);
+  border-radius:11px;font-size:1.4rem;line-height:1;cursor:pointer;color:#C8D1DC;
+  transition:transform .12s;}
+.star[aria-pressed="true"]{color:var(--star);border-color:var(--star);}
+.star:active{transform:scale(.9);}
 
 /* ---- 名前入力 ---- */
 .mask{position:fixed;inset:0;background:rgba(14,19,26,.62);display:none;
@@ -83,10 +85,10 @@ h1{font-size:1.24rem;margin:0;letter-spacing:.5px;font-weight:800;}
   padding:11px 12px;border:1.5px solid var(--line);border-radius:11px;
   background:var(--bg);color:var(--ink);}
 .modal input:focus{outline:none;border-color:var(--accent);}
-.modal .go{width:100%;margin-top:12px;font:inherit;font-weight:800;font-size:1rem;
+.modal .ok{width:100%;margin-top:12px;font:inherit;font-weight:800;font-size:1rem;
   color:#fff;background:linear-gradient(135deg,var(--accent2),var(--accent));
   border:none;border-radius:11px;padding:12px;cursor:pointer;}
-.modal .go:disabled{opacity:.45;}
+.modal .ok:disabled{opacity:.45;}
 
 .note{font-size:.78rem;color:var(--sub);line-height:1.8;margin:16px 2px 0;}
 .note b{color:var(--ink);}
@@ -109,9 +111,10 @@ h1{font-size:1.24rem;margin:0;letter-spacing:.5px;font-weight:800;}
   <div id="list"></div>
 
   <p class="note">
-    プリントの右上にあるQRコードを読みとると、その回のページが直接ひらきます。<br>
-    英文をタップすると、その文だけ読み上げます。<br>
-    <b>★</b>をおすと、その級がいちばん上に出てくるようになります。
+    <b>単語</b>／<b>文法</b>をひらくと、まず目次が出ます。やりたい単元をえらぶと、
+    その単元を3回くりかえしてから、つぎの単元にすすみます。<br>
+    プリント右上のQRコードからは、その回のページが直接ひらきます。<br>
+    <b>★</b>をおすと、いちばん上に出てくるようになります。
   </p>
 </div>
 
@@ -121,7 +124,7 @@ h1{font-size:1.24rem;margin:0;letter-spacing:.5px;font-weight:800;}
   <p>この端末にだけ保存されます。<br>あとから変えられます。</p>
   <input id="nm" type="text" maxlength="12" placeholder="なまえ"
          autocomplete="off" enterkeyhint="done">
-  <button class="go" id="go" disabled>はじめる</button>
+  <button class="ok" id="ok" disabled>はじめる</button>
 </div></div>
 
 <script>
@@ -132,45 +135,64 @@ var LEVELS = [
   {id:"p2", name:"英検準2級", color:"#7C2D12", t:"tp2.html", g:"gp2.html"},
   {id:"2",  name:"英検2級",  color:"#4C1D95", t:"t2.html",  g:"g2.html"}
 ];
-var KN = "yaruzo.name", KF = "yaruzo.fav";
+var KINDS = [{k:"t", label:"単語", cls:"tango"}, {k:"g", label:"文法", cls:"bunpo"}];
+var KN = "yaruzo.name", KF = "yaruzo.fav2";
 
 function get(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } }
 function set(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
 
 var favs = (function(){
   var raw = get(KF);
-  if(!raw) return [];
-  try{ var a = JSON.parse(raw); return Array.isArray(a) ? a : []; }catch(e){ return []; }
+  if(raw){ try{ var a = JSON.parse(raw); if(Array.isArray(a)) return a; }catch(e){} }
+  // 前のバージョン（級だけのお気に入り）があれば引きつぐ
+  var old = get("yaruzo.fav");
+  if(old){ try{
+    var b = JSON.parse(old), out = [];
+    if(Array.isArray(b)) b.forEach(function(id){ out.push(id+":t"); out.push(id+":g"); });
+    return out;
+  }catch(e){} }
+  return [];
 })();
 
 function esc(s){ return String(s).replace(/[&<>"]/g, function(c){
   return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
 
-function cardHTML(L){
-  var on = favs.indexOf(L.id) >= 0;
-  return '<div class="card' + (on ? ' fav' : '') + '">' +
-    '<div class="ctop">' +
-      '<span class="badge" style="background:' + L.color + '">' + L.name + '</span>' +
-      (on ? '<span class="favmark">お気に入り</span>' : '') +
-      '<button class="star" data-id="' + L.id + '" aria-pressed="' + on + '" ' +
-        'aria-label="' + L.name + 'をお気に入りにする">' + (on ? '★' : '☆') + '</button>' +
-    '</div><div class="btns">' +
-      '<a class="b tango" href="' + L.t + '">単語<small>音読ページ</small></a>' +
-      '<a class="b bunpo" href="' + L.g + '">文法<small>音読ページ</small></a>' +
-    '</div></div>';
+function rowHTML(L, K, withLevel){
+  var id = L.id + ":" + K.k, on = favs.indexOf(id) >= 0;
+  return '<div class="row">' +
+    '<a class="go ' + K.cls + '" href="' + L[K.k] + '">' +
+      '<span class="kind">' + K.label + '</span>' +
+      (withLevel ? '<span class="lvtag">' + L.name + '</span>' : '') +
+      '<span class="sub2">音読ページ</span>' +
+    '</a>' +
+    '<button class="star" data-id="' + id + '" aria-pressed="' + on + '" ' +
+      'aria-label="' + L.name + K.label + 'をお気に入りにする">' +
+      (on ? '★' : '☆') + '</button>' +
+  '</div>';
 }
 
 function draw(){
-  var fav = LEVELS.filter(function(L){ return favs.indexOf(L.id) >= 0; });
-  var rest = LEVELS.filter(function(L){ return favs.indexOf(L.id) < 0; });
-  document.getElementById("sec1").hidden = fav.length === 0;
-  document.getElementById("favbox").innerHTML = fav.map(cardHTML).join("");
-  document.getElementById("sec2").hidden = rest.length === 0;
-  document.getElementById("list").innerHTML = rest.map(cardHTML).join("");
+  var favHTML = "", restHTML = "";
+  LEVELS.forEach(function(L){
+    KINDS.forEach(function(K){
+      if(favs.indexOf(L.id + ":" + K.k) >= 0) favHTML += rowHTML(L, K, true);
+    });
+  });
+  LEVELS.forEach(function(L){
+    var rows = "";
+    KINDS.forEach(function(K){ rows += rowHTML(L, K, false); });
+    restHTML += '<div class="card">' +
+      '<span class="badge" style="background:' + L.color + '">' + L.name + '</span>' +
+      rows + '</div>';
+  });
+  document.getElementById("sec1").hidden = !favHTML;
+  document.getElementById("favbox").innerHTML =
+    favHTML ? '<div class="card favcard">' + favHTML + '</div>' : "";
+  document.getElementById("list").innerHTML = restHTML;
   Array.prototype.forEach.call(document.querySelectorAll(".star"), function(b){
     b.addEventListener("click", function(){
       var id = b.getAttribute("data-id"), i = favs.indexOf(id);
-      if(i >= 0){ favs.splice(i,1); } else { favs.unshift(id); }
+      if(i >= 0){ favs.splice(i,1); } else { favs.push(id); }
       set(KF, JSON.stringify(favs));
       draw();
     });
@@ -188,19 +210,19 @@ function hello(){
 
 var mask = document.getElementById("mask"),
     nm = document.getElementById("nm"),
-    go = document.getElementById("go");
+    ok = document.getElementById("ok");
 
 function ask(cur){
   nm.value = cur || "";
-  go.disabled = !nm.value.trim();
+  ok.disabled = !nm.value.trim();
   mask.classList.add("on");
   setTimeout(function(){ nm.focus(); }, 60);
 }
-nm.addEventListener("input", function(){ go.disabled = !nm.value.trim(); });
+nm.addEventListener("input", function(){ ok.disabled = !nm.value.trim(); });
 nm.addEventListener("keydown", function(e){
-  if(e.key === "Enter" && nm.value.trim()) go.click();
+  if(e.key === "Enter" && nm.value.trim()) ok.click();
 });
-go.addEventListener("click", function(){
+ok.addEventListener("click", function(){
   var v = nm.value.trim();
   if(!v) return;
   set(KN, v);
