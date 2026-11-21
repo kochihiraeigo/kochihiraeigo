@@ -221,14 +221,16 @@ font-family:inherit;}
 .tab.say.now{box-shadow:0 0 0 3px #9AE6B4;}
 </style>
 <script>
-const RATE=0.68, GAP=2000, RATEJA=0.85;
-let seq=[], idx=0, running=false, paused=false, timer=null, voiceEN=null, voiceJP=null;
+const RATE=0.68, GAP=2000, RATEJA=0.9;
+let seq=[], idx=0, loop=0, running=false, paused=false, timer=null, voiceEN=null, voiceJP=null;
+const LOOPS=3;
 function loadVoices(){const v=speechSynthesis.getVoices();
   const pref=["Google US English","Microsoft Aria","Samantha","Google UK English Female","Karen"];
   const en=v.filter(x=>/^en([-_]|$)/i.test(x.lang));
   voiceEN=pref.map(p=>en.find(x=>x.name.includes(p))).find(Boolean)||en.find(x=>x.lang==="en-US")||en[0]||null;
-  const jp=["Google 日本語","Kyoko","Microsoft Nanami","Otoya"];
-  voiceJP=jp.map(p=>v.find(x=>x.name.includes(p))).find(Boolean)||v.find(x=>/^ja/i.test(x.lang))||null;}
+  const jp=["Google 日本語","Kyoko (Enhanced)","O-ren (Enhanced)","Kyoko","O-ren","Hattori","Microsoft Nanami Online","Microsoft Nanami","Microsoft Ayumi","Otoya","Google Japanese"];
+  const ja=v.filter(x=>/^ja/i.test(x.lang));
+  voiceJP=jp.map(p=>ja.find(x=>x.name===p)||ja.find(x=>x.name.includes(p))).find(Boolean)||ja.find(x=>!x.localService)||ja[0]||null;}
 try{loadVoices();speechSynthesis.onvoiceschanged=loadVoices;}catch(e){}
 let wd=null;
 function say(text,lang,done){
@@ -251,6 +253,7 @@ function build(wrap){
     const isTab=el.classList.contains("tab");
     const t=clean(el);
     if(!t) return;
+    if(isTab && /気づい/.test(t)) return;   // 「気づいたことを書こう」は読み上げない
     if(!isTab && !/[A-Za-z]/.test(t)) return;
     el.classList.add("say");
     // 見出しの①②などの丸数字は読み上げない
@@ -263,11 +266,21 @@ function build(wrap){
   return items;}
 function mark(el){document.querySelectorAll(".say.now").forEach(x=>x.classList.remove("now"));
   if(el){el.classList.add("now");el.scrollIntoView({block:"center",behavior:"smooth"});}}
-function stop(){running=false;paused=false;clearTimeout(timer);clearTimeout(wd);
+function stop(){running=false;paused=false;loop=0;clearTimeout(timer);clearTimeout(wd);
   speechSynthesis.cancel();mark(null);setBtn();}
+function gotoUnit(i){curi=i;
+  wraps.forEach((w,j)=>w.classList.toggle("on",i===j));
+  tabs.forEach((t,j)=>t.classList.toggle("on",i===j));
+  const tb=tabs[i].parentNode;tb.scrollLeft=tabs[i].offsetLeft-tb.clientWidth/2+30;
+  try{history.replaceState(null,"","#p"+(i+1));}catch(e){}
+  cur();fit();window.scrollTo(0,0);}
 function step(){
   if(!running||paused) return;
-  if(idx>=seq.length){stop();return;}
+  if(idx>=seq.length){
+    loop++;
+    if(seq.length>0&&loop<LOOPS){idx=0;timer=setTimeout(step,GAP);return;}
+    if(curi+1<wraps.length){gotoUnit(curi+1);seq=cur().items;idx=0;loop=0;timer=setTimeout(step,GAP);return;}
+    stop();return;}
   const el=seq[idx];mark(el);
   say(el.dataset.say,el.dataset.lang,()=>{
     if(!running||paused) return;
@@ -275,7 +288,7 @@ function step(){
 function setBtn(){const b=document.getElementById("pz");
   b.textContent=paused?"▶ つづきから":"⏸ 一時停止";b.disabled=!running;}
 document.getElementById("from0").onclick=()=>{
-  stop();seq=cur().items;idx=0;running=true;paused=false;setBtn();
+  stop();seq=cur().items;idx=0;loop=0;running=true;paused=false;setBtn();
   timer=setTimeout(step,120);};
 document.getElementById("pz").onclick=()=>{
   if(!running) return;

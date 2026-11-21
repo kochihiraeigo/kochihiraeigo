@@ -252,7 +252,8 @@ body.showja .wline{border-bottom-color:#cbd5e0;}
 </style>
 <script>
 const RATE=0.68, GAP=1800;
-let seq=[], idx=0, running=false, paused=false, timer=null, voiceEN=null;
+let seq=[], idx=0, loop=0, running=false, paused=false, timer=null, voiceEN=null;
+const LOOPS=3;
 function loadVoices(){const v=speechSynthesis.getVoices();
   const pref=["Google US English","Microsoft Aria","Samantha","Google UK English Female","Karen"];
   const en=v.filter(x=>/^en([-_]|$)/i.test(x.lang));
@@ -271,7 +272,7 @@ function say(text,done){
   }catch(e){fin();}}
 function mark(el){document.querySelectorAll(".say.now").forEach(x=>x.classList.remove("now"));
   if(el){el.classList.add("now");el.scrollIntoView({block:"center",behavior:"smooth"});}}
-function stop(){running=false;paused=false;clearTimeout(timer);clearTimeout(wd);
+function stop(){running=false;paused=false;loop=0;clearTimeout(timer);clearTimeout(wd);
   speechSynthesis.cancel();mark(null);setBtn();}
 function build(wrap){
   const items=[];
@@ -280,9 +281,19 @@ function build(wrap){
       setTimeout(()=>say(el.dataset.say,()=>el.classList.remove("now")),80);};
     items.push(el);});
   return items;}
+function gotoUnit(i){curi=i;
+  wraps.forEach((w,j)=>w.classList.toggle("on",i===j));
+  tabs.forEach((t,j)=>t.classList.toggle("on",i===j));
+  const tb=tabs[i].parentNode;tb.scrollLeft=tabs[i].offsetLeft-tb.clientWidth/2+30;
+  try{history.replaceState(null,"","#p"+(i+1));}catch(e){}
+  cur();fit();window.scrollTo(0,0);}
 function step(){
   if(!running||paused) return;
-  if(idx>=seq.length){stop();return;}
+  if(idx>=seq.length){
+    loop++;
+    if(seq.length>0&&loop<LOOPS){idx=0;timer=setTimeout(step,GAP);return;}
+    if(curi+1<wraps.length){gotoUnit(curi+1);seq=cur().items;idx=0;loop=0;timer=setTimeout(step,GAP);return;}
+    stop();return;}
   const el=seq[idx];mark(el);
   say(el.dataset.say,()=>{
     if(!running||paused) return;
@@ -290,7 +301,7 @@ function step(){
 function setBtn(){const b=document.getElementById("pz");
   b.textContent=paused?"▶ つづきから":"⏸ 一時停止";b.disabled=!running;}
 document.getElementById("from0").onclick=()=>{
-  stop();seq=cur().items;idx=0;running=true;paused=false;setBtn();
+  stop();seq=cur().items;idx=0;loop=0;running=true;paused=false;setBtn();
   timer=setTimeout(step,120);};
 document.getElementById("pz").onclick=()=>{
   if(!running) return;
