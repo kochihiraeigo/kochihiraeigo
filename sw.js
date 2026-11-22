@@ -1,5 +1,5 @@
 /* 英語やるぞ！ ―― オフラインでも開けるようにする */
-var VERSION = "v7";
+var VERSION = "v8";
 var SHELL = "yaruzo-shell-" + VERSION;
 var PAGES = "yaruzo-pages-" + VERSION;
 
