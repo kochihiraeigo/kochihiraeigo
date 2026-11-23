@@ -1,0 +1,365 @@
+<!doctype html><html lang="ja"><head><!--yaruzo-pwa--><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#D1095A"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="英語やるぞ！"><style>.yzhome{display:inline-flex;align-items:center;gap:5px;text-decoration:none;color:#fff;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.42);border-radius:8px;padding:4px 10px 5px;font-weight:700;font-size:13px;margin-right:4px;}.yzhome b{font-size:15px;line-height:1;}</style><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap"><title>英検5級 文法プリント 音読</title><meta charset="utf-8"><style>
+:root{--navy:#1A365D;--blue:#2B6CB0;--green:#2F855A;--orange:#C05621;
+--purple:#6B46C1;--ghdr:#9AE6B4;--gbg:#F0FFF4;--gln:#9AE6B4;
+--grayhdr:#CBD5E0;--yellow:#FFF3BF;--cream:#FFF8F0;--orangeln:#E0B088;
+--tan:#F3E3CF;--tanln:#D9B892;--soft:#5B6B82;--line:#CBD5E0;}
+*{box-sizing:border-box;}@page{size:A4;margin:0;}html,body{margin:0;padding:0;}
+body{font-family:"Inter","Noto Sans JP","Noto Sans CJK JP",sans-serif;color:#222b38;
+font-size:15pt;line-height:1.48;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.en{font-family:"Inter","DejaVu Sans",sans-serif;}
+.page{position:relative;width:210mm;height:297mm;padding:11mm 14mm 14mm;
+page-break-after:always;overflow:hidden;}
+.page:last-child{page-break-after:auto;}
+.hdr{display:flex;justify-content:space-between;align-items:flex-start;}
+.hdr-left{display:flex;align-items:center;gap:15px;}
+.bignum{font-size:30pt;font-weight:800;color:var(--navy);line-height:1;}
+.pills{display:flex;gap:7px;margin-bottom:6px;}
+.pill{display:inline-block;padding:3px 13px;border-radius:12px;color:#fff;
+font-size:12pt;font-weight:700;}
+.pill.navy{background:var(--navy);}.pill.green{background:var(--green);}
+.chlabel{font-size:11pt;font-weight:700;color:#5a6b82;margin:0 0 2px;}
+.htitle{font-size:19pt;font-weight:800;color:var(--navy);line-height:1.1;}
+.qr{width:70px;height:56px;border:1.5px dashed #9aa6b5;border-radius:4px;
+font-size:8pt;color:#8a97a6;text-align:center;display:flex;align-items:center;
+justify-content:center;line-height:1.3;}
+.hdr-rule{height:3px;background:var(--navy);border-radius:2px;margin:8px 0 8px;}
+.lead{color:var(--soft);font-size:13.5pt;margin:0 2px 0;}
+.tab{display:inline-block;color:#fff;font-weight:700;font-size:13pt;
+padding:3px 14px 4px;border-radius:7px;margin:9px 0 5px;}
+.tab.green{background:var(--green);}.tab.orange{background:var(--orange);}
+.tab.purple{background:var(--purple);}.tab.blue{background:var(--blue);}
+
+/* ---- 見くらべ ---- */
+table.cmp{border-collapse:separate;border-spacing:0 4px;width:100%;}
+table.cmp th{font-size:13pt;font-weight:800;padding:5px 10px;border-radius:7px;}
+th.lh{background:var(--grayhdr);color:#2d3748;}
+th.rh{background:var(--ghdr);color:#1c4532;}
+th.ar{width:40px;background:none;}
+table.cmp td{vertical-align:top;}
+td.lc{background:#fff;border:1.5px solid #cbd5e0;border-radius:8px;padding:4px 11px 5px;width:44%;}
+td.rc{background:var(--gbg);border:1.5px solid var(--gln);border-radius:8px;padding:4px 11px 5px;width:44%;}
+td.ar{text-align:center;color:#2F855A;font-size:20pt;font-weight:800;}
+/* 英語は英語だけで1かたまり、日本語は日本語だけで次の行に。文頭は左でそろえる */
+td.lc .en,td.rc .en{display:block;font-size:14pt;line-height:1.2;}
+.cja{display:block;color:#6a6a6a;font-size:10.5pt;margin:2px 0 0;}
+.cen{font-size:15pt;}.ctag{color:var(--soft);font-size:11pt;margin-top:0;}
+
+/* ---- 気づき ---- */
+.notice{border:1.5px dashed var(--green);background:var(--gbg);border-radius:11px;
+padding:9px 16px 10px;margin:0;}
+.notice .p{color:#1c4532;font-weight:400;font-size:13pt;margin:0 0 13px;}
+.rl{border-bottom:1.5px solid #bcd9c6;height:24px;}
+
+/* ---- ルール ---- */
+.rulebox{background:#FFFCF7;border:1.5px solid #ECCBA6;border-radius:11px;
+padding:12px 18px 13px;margin:0;}
+.rlead{font-size:13pt;margin:0 0 9px;color:#6a5a48;}
+.patt{display:flex;gap:11px;margin:0 0 9px;}
+.pchip{background:#fff;border:1.5px solid #E0B089;border-radius:20px;padding:4px 16px;
+font-size:13.5pt;color:#8a4a1e;font-weight:600;}
+.pchip b{color:var(--orange);font-weight:800;}
+/* 枠なしで少し大きめに見せる具体例文 */
+.pexwrap{margin:2px 0 9px;}
+.pex{font-size:17pt;color:var(--orange);font-weight:800;line-height:1.35;margin:0 0 2px;}
+.pex b{color:var(--orange);font-weight:800;}
+.pex.pex-sel{font-weight:500;}
+.rnote{border:1.5px solid #E53E3E;background:#FFF5F5;border-radius:9px;
+padding:7px 13px 8px;margin:9px 0 0;font-size:12pt;color:#9B2C2C;line-height:1.5;}
+.rnote b{color:#C53030;font-weight:800;}
+.dcmp .rnote{font-size:11pt;padding:6px 11px 7px;margin:7px 0 0;}
+.pja b{font-weight:800;color:#7a5a30;}
+.dcmp .pex{font-size:15.5pt;}
+.pja{display:block;font-size:11.5pt;color:#8a7a68;font-weight:600;margin-top:1px;}
+.pchip .pja{display:inline;margin-left:8px;font-size:11pt;}
+.dcmp .pja{font-size:10.5pt;}
+table.be{border-collapse:collapse;width:100%;margin:2px 0 8px;}
+table.be th,table.be td{border:1.5px solid var(--tanln);padding:7px 12px;text-align:center;}
+table.be th{background:var(--tan);color:#7a4a1e;font-weight:800;font-size:14pt;}
+table.be td{background:#fff;font-size:16pt;}
+table.be td.sub{background:#FBF2E6;font-weight:800;color:var(--navy);}
+table.be th:nth-child(1),table.be td:nth-child(1){width:30%;}
+table.be th:nth-child(2),table.be td:nth-child(2){width:42%;}
+table.be td.pt{font-size:12.5pt;color:#6b5a48;font-weight:600;}
+table.be .tja{display:block;font-size:10.5pt;color:#8a7a68;font-weight:600;margin-top:2px;line-height:1.3;}
+table.be td.sub .tja{color:#6b7a8a;}
+table.be.tight th,table.be.tight td{padding:3px 9px;}
+table.be.tight td{font-size:14pt;}table.be.tight th{font-size:12.5pt;}
+table.be.tight .tja{font-size:9.8pt;margin-top:1px;}
+table.be.tight{margin:1px 0 4px;}
+table.be.tight th,table.be.tight td{padding:2.5px 7px;}
+table.be.tight th:nth-child(1),table.be.tight td:nth-child(1){width:15%;font-size:11.5pt;white-space:nowrap;}
+table.be.tight th:nth-child(2),table.be.tight td:nth-child(2){width:29%;font-size:11.5pt;white-space:nowrap;}
+table.be.tight th:nth-child(3),table.be.tight td:nth-child(3){width:56%;text-align:left;}
+table.be.tight td.en{font-size:13.5pt;line-height:1.25;}
+.tline{display:block;}
+.tline + .tline{margin-top:3px;}
+.tcap{font-size:12.5pt;font-weight:800;color:#7a4a1e;margin:7px 0 2px;}
+.dcmp .tcap{font-size:11pt;margin:5px 0 1px;}
+.ruleex{display:flex;align-items:baseline;padding:2.5px 2px;}
+.rx-en{font-size:16.5pt;flex:0 1 auto;min-width:0;}
+.rx-lead{flex:1 1 auto;border-bottom:1.5px dotted #E3CBAC;margin:0 11px 7px;min-width:18px;}
+.rx-ja{font-size:11.5pt;color:#7a6a58;flex:0 1 auto;min-width:0;text-align:right;line-height:1.35;}
+ul.pts{margin:7px 0 0;padding-left:5px;list-style:none;font-size:13pt;}
+ul.pts li{margin:4px 0;text-indent:-15px;padding-left:15px;}
+ul.pts li:before{content:"・";color:var(--orange);font-weight:800;}
+.hl{color:var(--orange);font-weight:800;}.hlb{color:var(--navy);font-weight:800;}
+
+/* ---- 例文 ---- */
+.exrow{display:flex;align-items:baseline;padding:4px 2px;}
+.exnum{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--purple);
+color:#fff;font-size:11pt;font-weight:700;text-align:center;line-height:22px;margin-right:11px;}
+.exen{flex:0 1 auto;min-width:0;font-size:17pt;}
+.exlead{flex:1 1 auto;border-bottom:1.5px dotted #C6CDD6;margin:0 11px 7px;min-width:18px;}
+.exja{flex:0 1 auto;min-width:0;color:#6b7a8d;font-size:11.5pt;text-align:right;line-height:1.35;}
+.yh{background:var(--yellow);font-weight:700;padding:0 2px;border-radius:2px;}
+/* 和訳側：英語のハイライト／太字に対応させる */
+.exja b{background:var(--yellow);color:#3f4a5a;font-weight:700;padding:0 2px;border-radius:2px;}
+.rx-ja b{color:#5a4a38;font-weight:800;}
+.cja b{color:#3f4a5a;font-weight:800;}
+/* 「s が消える」を見せる打ち消し表記 */
+.xs{text-decoration:line-through;text-decoration-color:#D1495B;
+text-decoration-thickness:2px;color:#D1495B;}
+
+/* ---- practice ---- */
+.pbox{display:inline-block;background:var(--blue);color:#fff;font-weight:800;
+font-size:16pt;padding:6px 20px 7px;border-radius:9px;margin:2px 0 6px;}
+.pbox.gray{background:#8A94A6;}
+.prow{display:flex;align-items:center;justify-content:space-between;margin:2px 0 6px;}
+.prow .pbox{margin:0;}
+.score{display:inline-block;border:2.2px solid var(--blue);border-radius:9px;
+min-width:104px;padding:4px 13px 5px;text-align:right;color:var(--navy);
+font-weight:800;font-size:15pt;line-height:1.15;}
+.sec{color:var(--navy);font-weight:800;font-size:15pt;border-left:5px solid var(--blue);
+padding-left:10px;margin:9px 0 6px;}
+.item{margin:0 0 5px;font-size:15pt;}
+.qn{color:var(--blue);font-weight:800;margin-right:4px;}
+.scr{color:var(--blue);font-weight:700;}
+.writeline{border-bottom:1.5px solid #9aa7b6;height:20px;margin-top:3px;}
+.marks{font-size:15pt;letter-spacing:1px;}
+.corrline{border-bottom:1.5px solid #9aa7b6;height:20px;margin-top:3px;}
+.clab{color:#8090a2;font-size:12.5pt;}
+
+.foot{position:absolute;left:14mm;right:14mm;bottom:9mm;text-align:center;
+color:var(--blue);font-size:11pt;font-weight:700;border-top:1.5px solid #d7dee8;padding-top:7px;}
+/* answers */
+.ansh{color:var(--navy);font-weight:800;font-size:12.5pt;border-left:4px solid var(--blue);
+padding-left:9px;margin:9px 0 3px;}
+.ans{font-size:12.5pt;padding:2.5px 2px;border-bottom:1px dotted #dad4d0;}
+.ans .num{color:var(--blue);font-weight:800;margin-right:5px;}
+.ans .k{color:#1a1a1a;font-weight:400;}
+.ans .note{color:var(--soft);font-size:10pt;}
+
+.sf, .sf .en{font-family:"Noto Sans CJK JP","DejaVu Sans",sans-serif;}
+
+/* ---- 声に出しながら書いてみよう ページ ---- */
+.wbanner{background:#2F855A;color:#fff;font-weight:800;font-size:15pt;padding:5px 18px 6px;border-radius:9px;display:inline-block;margin:2px 0 4px;}
+.wsub{font-size:12pt;color:#444;margin:0 0 12px;}
+.copyitem{margin-bottom:19px;}
+.copyen{font-size:17pt;font-weight:600;color:#1a1a1a;}
+.copyja{font-size:11.5pt;color:#5B6B82;margin-left:8px;}
+.copyline{border-bottom:1.5px solid #9fb0c3;height:48px;margin-top:6px;}
+
+/* ---- 発見ページ（見くらべ有り）を詰める ---- */
+.dcmp .tab{font-size:12.5pt;padding:3px 13px;margin:7px 0 4px;}
+.dcmp table.cmp{border-spacing:0 3px;}
+.dcmp td.lc,.dcmp td.rc{padding:3px 10px 4px;}
+.dcmp td.lc .en,.dcmp td.rc .en{font-size:13pt;line-height:1.2;}
+.dcmp .cja{font-size:10pt;margin:1px 0 0;}
+.dcmp .notice{padding:7px 14px 8px;margin:0;}
+.dcmp .notice .p{font-size:12.5pt;margin:0 0 11px;}
+.dcmp .rl{height:20px;}
+.dcmp .rulebox{padding:9px 15px 10px;margin:0;}
+.dcmp .rlead{font-size:12.5pt;margin:0 0 7px;}
+.dcmp .patt{gap:9px;margin:0 0 7px;}
+.dcmp .pchip{padding:3px 13px;font-size:12.5pt;}
+.dcmp ul.pts{margin:5px 0 0;font-size:12pt;}
+.dcmp .exrow{padding:1.5px 2px;}
+.dcmp .exen{font-size:15pt;}
+.dcmp .exja{font-size:10.5pt;}
+.dcmp .exnum{width:20px;height:20px;line-height:20px;font-size:10pt;margin-right:9px;}
+
+/* ---- 全体ルール：字余り（孤立2〜3字の改行）を防ぐ ---- */
+/* 日本語の行を自動で均等割り・末尾の泣き別れ(1〜3字だけ次行)を抑止 */
+.lead,.goal,.notice .p,.rlead,.exja,.rx-ja,.ctag,
+.copyja,.item,.ans,.htitle,.wsub{
+  text-wrap:pretty; line-break:strict; overflow-wrap:break-word;}
+td.lc,td.rc,th.lh,th.rh,.notice .p{ text-wrap:balance;}
+/* 見くらべセル等の和訳は1かたまりで扱い、2〜3字の泣き別れを防ぐ */
+.cja{ word-break:keep-all; overflow-wrap:normal;}
+.rx-ja{ word-break:auto-phrase; overflow-wrap:normal;}
+.exja{ word-break:auto-phrase; overflow-wrap:normal;}
+/* 日本語は「文節」単位で改行し、熟語の途中（動／詞）で割れないようにする */
+.lead,.goal,.rlead,.notice .p,.copyja,.item,.ans,.htitle,.wsub,.sec,.pts li{
+  word-break:auto-phrase;}
+.qrsvg{width:64px;height:64px;}
+.qrsvg svg{display:block;width:64px;height:64px;}
+
+:root{--navy:#1A365D;}
+</style><style>
+body{background:#EEF2F7;}
+.gbar{position:sticky;top:0;z-index:20;background:#1A365D;color:#fff;
+padding:8px 10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;
+font-family:"Inter","Noto Sans JP","Noto Sans CJK JP",sans-serif;font-size:14px;}
+.gbtn{border:none;border-radius:999px;padding:8px 16px;font-weight:800;cursor:pointer;
+font-size:14px;background:#FF9F1C;color:#3a2600;font-family:inherit;}
+.gbtn.ghost{background:rgba(255,255,255,.16);color:#fff;}
+.gbtn:disabled{opacity:.4;cursor:default;}
+.gtabs{display:flex;gap:6px;flex:1 0 100%;flex-wrap:nowrap;overflow-x:auto;
+padding:2px 0 4px;scrollbar-width:thin;}
+.gtab{flex:0 0 auto;}
+.gtab{border:1.5px solid rgba(255,255,255,.45);background:transparent;color:#fff;
+border-radius:999px;padding:5px 12px;font-weight:700;cursor:pointer;font-size:13px;
+font-family:inherit;}
+.gtab.on{background:#fff;color:#1A365D;border-color:#fff;}
+.ghint{opacity:.85;font-size:12.5px;}
+.gwrap{display:none;overflow:hidden;padding:10px 0 30px;}
+.gwrap.on{display:block;}
+.gscale{transform-origin:top left;margin:0 auto;}
+.page{box-shadow:0 2px 14px rgba(26,54,93,.18);background:#fff;margin:0 auto;}
+.say{cursor:pointer;border-radius:5px;transition:background .12s;}
+.say:hover{background:#FFF3BF;}
+.say.now{background:#C6F6D5;box-shadow:0 0 0 3px #9AE6B4;}
+.tab.say.now{box-shadow:0 0 0 3px #9AE6B4;}
+
+.gbar{background:#1A365D;}
+.gtab.on{color:#1A365D;}
+#tocbtn{background:rgba(255,255,255,.16);color:#fff;}
+.gnow{font-size:12.5px;opacity:.9;font-weight:700;white-space:nowrap;}
+/* ---- 目次 ---- */
+.gtoc{display:none;padding:16px 14px 46px;max-width:720px;margin:0 auto;
+font-family:"Inter","Noto Sans JP","Noto Sans CJK JP",sans-serif;}
+body.tocon .gtoc{display:block;}
+body.tocon .gwrap{display:none !important;}
+body.tocon .gtabs,body.tocon #pz,body.tocon #from0,body.tocon #ja,
+body.tocon .ghint,body.tocon #tocbtn,body.tocon .gnow{display:none;}
+.toch{font-size:19px;font-weight:800;color:#1A365D;margin:0 0 4px;}
+.tocsub{font-size:13px;color:#5a6b82;line-height:1.7;margin:0 0 14px;}
+.tocall{display:block;width:100%;border:none;border-radius:12px;cursor:pointer;
+background:#FF9F1C;color:#3a2600;font-weight:800;font-size:16px;padding:14px 10px;
+margin:0 0 16px;font-family:inherit;}
+.tocall:active{filter:brightness(.93);}
+.toclist{display:flex;flex-direction:column;gap:8px;}
+.tocrow{display:flex;align-items:center;gap:11px;width:100%;text-align:left;
+background:#fff;border:1.5px solid #DCE3EC;border-radius:12px;padding:11px 12px;
+cursor:pointer;font-family:inherit;color:#222b38;}
+.tocrow:active{background:#F4F7FA;}
+.tnum{flex:0 0 auto;min-width:38px;text-align:center;background:#1A365D;color:#fff;
+font-weight:800;font-size:14px;border-radius:8px;padding:5px 6px;}
+.tbody{flex:1 1 auto;min-width:0;}
+.tch{font-size:11.5px;color:#7a8798;line-height:1.4;}
+.ttl{font-size:15px;font-weight:700;line-height:1.4;margin-top:1px;}
+.tgo{flex:0 0 auto;color:#1A365D;font-size:17px;font-weight:800;opacity:.55;}
+.tocnote{font-size:12px;color:#8a97a6;line-height:1.8;margin-top:16px;}
+</style><style>.page{height:auto!important;min-height:297mm;padding-bottom:22mm}.foot{position:static!important;margin-top:10px}.gtoc .tch{font-size:11pt}</style></head><body><div class="gbar"><a class="yzhome" href="index.html" title="英語やるぞ！ホーム"><b>英</b>ホーム</a><button class="gbtn ghost" id="tocbtn">☰ 目次</button><button class="gbtn" id="from0">▶ この回をはじめから</button><button class="gbtn ghost" id="pz" disabled>⏸ 一時停止</button><span class="gnow" id="gnow"></span><span class="ghint">文をタップすると、それだけ流れます</span><span class="gtabs"><button class="gtab" data-i="0">01</button><button class="gtab" data-i="1">02</button><button class="gtab" data-i="2">03</button><button class="gtab" data-i="3">04</button><button class="gtab" data-i="4">05</button><button class="gtab" data-i="5">06</button><button class="gtab" data-i="6">07</button><button class="gtab" data-i="7">08</button><button class="gtab" data-i="8">09</button><button class="gtab" data-i="9">10</button></span></div><div class="gtoc" id="toc"><div class="toch">総復習　文法100問（中1〜中3）</div><div class="tocsub">やりたい単元をえらんでね。えらんだ単元を3回くりかえしたら、自動でつぎの単元にすすみます。</div><button class="tocall" id="playall">▶ はじめから　ぜんぶ流す</button><div class="toclist"><button class="tocrow" data-i="0"><span class="tnum">01</span><span class="tbody"><div class="tch">総復習</div><div class="ttl">文法 1/10</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="1"><span class="tnum">02</span><span class="tbody"><div class="tch">総復習</div><div class="ttl">文法 2/10</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="2"><span class="tnum">03</span><span class="tbody"><div class="tch">総復習</div><div class="ttl">文法 3/10</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="3"><span class="tnum">04</span><span class="tbody"><div class="tch">総復習</div><div class="ttl">文法 4/10</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="4"><span class="tnum">05</span><span class="tbody"><div class="tch">総復習</div><div class="ttl">文法 5/10</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="5"><span class="tnum">06</span><span class="tbody"><div class="tch">総復習</div><div class="ttl">文法 6/10</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="6"><span class="tnum">07</span><span class="tbody"><div class="tch">総復習</div><div class="ttl">文法 7/10</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="7"><span class="tnum">08</span><span class="tbody"><div class="tch">総復習</div><div class="ttl">文法 8/10</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="8"><span class="tnum">09</span><span class="tbody"><div class="tch">総復習</div><div class="ttl">文法 9/10</div></span><span class="tgo">▶</span></button><button class="tocrow" data-i="9"><span class="tnum">10</span><span class="tbody"><div class="tch">総復習</div><div class="ttl">文法 10/10</div></span><span class="tgo">▶</span></button></div><div class="tocnote">とちゅうでやめたいときは「⏸ 一時停止」。目次にもどるときは左上の「☰ 目次」をおしてください。</div></div><div class="gwrap" data-i="0"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">01</span><div><div class="chlabel">総復習</div><div class="htitle">文法 1/10</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">I like to speak English.</span></span><span class="exlead"></span><span class="exja">中2 不定詞(名詞的用法)</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">Is she cooking now?</span></span><span class="exlead"></span><span class="exja">中1 現在進行形</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">Were you busy yesterday?</span></span><span class="exlead"></span><span class="exja">中1 be動詞の過去形</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">The teacher taught us that the earth is round.</span></span><span class="exlead"></span><span class="exja">中3 SVOO(that節)</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">I was reading a book then.</span></span><span class="exlead"></span><span class="exja">中1 過去進行形</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">It works well.</span></span><span class="exlead"></span><span class="exja">中1 三人称単数(he/she/it)</span></div><div class="exrow"><span class="exnum">7</span><span class="exen"><span class="en">The cake that he made is delicious.</span></span><span class="exlead"></span><span class="exja">中3 関係代名詞(which / that 目的格)</span></div><div class="exrow"><span class="exnum">8</span><span class="exen"><span class="en">Let me introduce myself.</span></span><span class="exlead"></span><span class="exja">中3 let / help + 人 + 動詞の原形</span></div><div class="exrow"><span class="exnum">9</span><span class="exen"><span class="en">If he could come, we would be happy.</span></span><span class="exlead"></span><span class="exja">中3 仮定法(If + 主語 + 過去形, ...)</span></div><div class="exrow"><span class="exnum">10</span><span class="exen"><span class="en">The boy running over there is my brother.</span></span><span class="exlead"></span><span class="exja">中3 現在分詞の後置修飾</span></div><div class="foot">総復習　文法100問（中1〜中3）　01　文法 1/10</div></section></div></div><div class="gwrap" data-i="1"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">02</span><div><div class="chlabel">総復習</div><div class="htitle">文法 2/10</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">This is the bus which goes to Kyoto.</span></span><span class="exlead"></span><span class="exja">中3 関係代名詞(which / that 主格)</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">I wish I could fly like a bird.</span></span><span class="exlead"></span><span class="exja">中3 仮定法(I wish ...)</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">Be careful.</span></span><span class="exlead"></span><span class="exja">中1 命令文</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">He does not play tennis.</span></span><span class="exlead"></span><span class="exja">中1 三人称単数(he/she/it)</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">The movie that I saw yesterday was interesting.</span></span><span class="exlead"></span><span class="exja">中3 関係代名詞(which / that 目的格)</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">She wants to be a doctor.</span></span><span class="exlead"></span><span class="exja">中1 want to V</span></div><div class="exrow"><span class="exnum">7</span><span class="exen"><span class="en">He can run fast.</span></span><span class="exlead"></span><span class="exja">中1 can</span></div><div class="exrow"><span class="exnum">8</span><span class="exen"><span class="en">I did not watch TV yesterday.</span></span><span class="exlead"></span><span class="exja">中1 一般動詞の過去形</span></div><div class="exrow"><span class="exnum">9</span><span class="exen"><span class="en">He enjoys reading books.</span></span><span class="exlead"></span><span class="exja">中2 動名詞</span></div><div class="exrow"><span class="exnum">10</span><span class="exen"><span class="en">She has seen the movie before.</span></span><span class="exlead"></span><span class="exja">中3 現在完了形(経験)</span></div><div class="foot">総復習　文法100問（中1〜中3）　02　文法 2/10</div></section></div></div><div class="gwrap" data-i="2"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">03</span><div><div class="chlabel">総復習</div><div class="htitle">文法 3/10</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">It is fun to learn foreign languages.</span></span><span class="exlead"></span><span class="exja">中3 It is ... (for 人) to ...</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">I like listening to music.</span></span><span class="exlead"></span><span class="exja">中2 動名詞</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">She was sad to read the letter.</span></span><span class="exlead"></span><span class="exja">中2 不定詞(副詞的用法)</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">I want to go to the park.</span></span><span class="exlead"></span><span class="exja">中1 want to V</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">I know that he is a doctor.</span></span><span class="exlead"></span><span class="exja">中2 接続詞(when / if / because / that / though)</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">I have an uncle who works as a doctor.</span></span><span class="exlead"></span><span class="exja">中3 関係代名詞(who)</span></div><div class="exrow"><span class="exnum">7</span><span class="exen"><span class="en">They were singing then.</span></span><span class="exlead"></span><span class="exja">中1 過去進行形</span></div><div class="exrow"><span class="exnum">8</span><span class="exen"><span class="en">I have not eaten anything since yesterday.</span></span><span class="exlead"></span><span class="exja">中3 現在完了形(継続)</span></div><div class="exrow"><span class="exnum">9</span><span class="exen"><span class="en">He has been playing games since three o&#x27;clock.</span></span><span class="exlead"></span><span class="exja">中3 現在完了進行形</span></div><div class="exrow"><span class="exnum">10</span><span class="exen"><span class="en">If I had a billion yen, I would travel around the world.</span></span><span class="exlead"></span><span class="exja">中3 仮定法(If + 主語 + 過去形, ...)</span></div><div class="foot">総復習　文法100問（中1〜中3）　03　文法 3/10</div></section></div></div><div class="gwrap" data-i="3"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">04</span><div><div class="chlabel">総復習</div><div class="htitle">文法 4/10</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">They have never written a letter in English.</span></span><span class="exlead"></span><span class="exja">中3 現在完了形(経験)</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">She is a teacher.</span></span><span class="exlead"></span><span class="exja">中1 be動詞</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">We are not going to be late tomorrow.</span></span><span class="exlead"></span><span class="exja">中2 未来形(be going to)</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">Is this song loved by young people?</span></span><span class="exlead"></span><span class="exja">中2 受け身</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">This book is mine.</span></span><span class="exlead"></span><span class="exja">中1 所有代名詞</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">The song made him famous.</span></span><span class="exlead"></span><span class="exja">中2 SVOC(call / make + O + C)</span></div><div class="exrow"><span class="exnum">7</span><span class="exen"><span class="en">I have not met her since last month.</span></span><span class="exlead"></span><span class="exja">中3 現在完了形(継続)</span></div><div class="exrow"><span class="exnum">8</span><span class="exen"><span class="en">May I take a picture here?</span></span><span class="exlead"></span><span class="exja">中2 助動詞(should / may)</span></div><div class="exrow"><span class="exnum">9</span><span class="exen"><span class="en">I respect people who get up early.</span></span><span class="exlead"></span><span class="exja">中3 関係代名詞(who)</span></div><div class="exrow"><span class="exnum">10</span><span class="exen"><span class="en">Do I have to go now?</span></span><span class="exlead"></span><span class="exja">中2 助動詞(must / have to)</span></div><div class="foot">総復習　文法100問（中1〜中3）　04　文法 4/10</div></section></div></div><div class="gwrap" data-i="4"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">05</span><div><div class="chlabel">総復習</div><div class="htitle">文法 5/10</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">Please tell me what you are looking at.</span></span><span class="exlead"></span><span class="exja">中3 SVOO(what節など)</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">I wish he were here now.</span></span><span class="exlead"></span><span class="exja">中3 仮定法(I wish ...)</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">Is there a cat in the room?</span></span><span class="exlead"></span><span class="exja">中1 There is/are</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">Please keep the window open.</span></span><span class="exlead"></span><span class="exja">中3 SVOC(C=形容詞)</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">It is necessary for us to learn history.</span></span><span class="exlead"></span><span class="exja">中3 It is ... (for 人) to ...</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">He sang us a song.</span></span><span class="exlead"></span><span class="exja">中2 SVOO(give / show / tell + 人 + 物)</span></div><div class="exrow"><span class="exnum">7</span><span class="exen"><span class="en">This bag is his.</span></span><span class="exlead"></span><span class="exja">中1 所有代名詞</span></div><div class="exrow"><span class="exnum">8</span><span class="exen"><span class="en">I bought a new bag last week.</span></span><span class="exlead"></span><span class="exja">中1 一般動詞の過去形</span></div><div class="exrow"><span class="exnum">9</span><span class="exen"><span class="en">This book is more interesting than that one.</span></span><span class="exlead"></span><span class="exja">中2 比較級</span></div><div class="exrow"><span class="exnum">10</span><span class="exen"><span class="en">You must not run in the hall.</span></span><span class="exlead"></span><span class="exja">中2 助動詞(must / have to)</span></div><div class="foot">総復習　文法100問（中1〜中3）　05　文法 5/10</div></section></div></div><div class="gwrap" data-i="5"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">06</span><div><div class="chlabel">総復習</div><div class="htitle">文法 6/10</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">Please come as soon as you can.</span></span><span class="exlead"></span><span class="exja">中2 as...as(原級)</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">This is a song that is loved all over the world.</span></span><span class="exlead"></span><span class="exja">中3 関係代名詞(which / that 主格)</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">Today is hotter than yesterday.</span></span><span class="exlead"></span><span class="exja">中2 比較級</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">She has not replied to me yet.</span></span><span class="exlead"></span><span class="exja">中3 現在完了形(完了・結果)</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">I am going to do my homework tonight.</span></span><span class="exlead"></span><span class="exja">中2 未来形(be going to)</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">I read a letter written in English.</span></span><span class="exlead"></span><span class="exja">中3 過去分詞の後置修飾</span></div><div class="exrow"><span class="exnum">7</span><span class="exen"><span class="en">My mother wants me to go to bed early.</span></span><span class="exlead"></span><span class="exja">中3 want / tell / ask + 人 + to ...</span></div><div class="exrow"><span class="exnum">8</span><span class="exen"><span class="en">Don&#x27;t be late for school.</span></span><span class="exlead"></span><span class="exja">中1 命令文</span></div><div class="exrow"><span class="exnum">9</span><span class="exen"><span class="en">I like drawing pictures.</span></span><span class="exlead"></span><span class="exja">中2 動名詞</span></div><div class="exrow"><span class="exnum">10</span><span class="exen"><span class="en">She helped me carry my bags.</span></span><span class="exlead"></span><span class="exja">中3 let / help + 人 + 動詞の原形</span></div><div class="foot">総復習　文法100問（中1〜中3）　06　文法 6/10</div></section></div></div><div class="gwrap" data-i="6"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">07</span><div><div class="chlabel">総復習</div><div class="htitle">文法 7/10</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">There are no flowers in the park.</span></span><span class="exlead"></span><span class="exja">中1 There is/are</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">What is this?</span></span><span class="exlead"></span><span class="exja">中1 疑問詞</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">We have been waiting for an hour.</span></span><span class="exlead"></span><span class="exja">中3 現在完了進行形</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">She studies the hardest.</span></span><span class="exlead"></span><span class="exja">中2 最上級</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">We call the cat Tama.</span></span><span class="exlead"></span><span class="exja">中2 SVOC(call / make + O + C)</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">Will they visit Tokyo next week?</span></span><span class="exlead"></span><span class="exja">中2 未来形(will)</span></div><div class="exrow"><span class="exnum">7</span><span class="exen"><span class="en">I do not know why she is angry.</span></span><span class="exlead"></span><span class="exja">中3 間接疑問文</span></div><div class="exrow"><span class="exnum">8</span><span class="exen"><span class="en">I think that he is kind.</span></span><span class="exlead"></span><span class="exja">中2 接続詞(when / if / because / that / though)</span></div><div class="exrow"><span class="exnum">9</span><span class="exen"><span class="en">Please keep the room warm.</span></span><span class="exlead"></span><span class="exja">中3 SVOC(C=形容詞)</span></div><div class="exrow"><span class="exnum">10</span><span class="exen"><span class="en">She sings as well as I do.</span></span><span class="exlead"></span><span class="exja">中2 as...as(原級)</span></div><div class="foot">総復習　文法100問（中1〜中3）　07　文法 7/10</div></section></div></div><div class="gwrap" data-i="7"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">08</span><div><div class="chlabel">総復習</div><div class="htitle">文法 8/10</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">The letter was not written by him.</span></span><span class="exlead"></span><span class="exja">中2 受け身</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">What should I do?</span></span><span class="exlead"></span><span class="exja">中2 助動詞(should / may)</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">I asked him to open the window.</span></span><span class="exlead"></span><span class="exja">中3 want / tell / ask + 人 + to ...</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">She has been running since this morning.</span></span><span class="exlead"></span><span class="exja">中3 現在完了進行形</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">Can you play the piano?</span></span><span class="exlead"></span><span class="exja">中1 can</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">She has never played tennis.</span></span><span class="exlead"></span><span class="exja">中3 現在完了形(経験)</span></div><div class="exrow"><span class="exnum">7</span><span class="exen"><span class="en">I have not finished my homework yet.</span></span><span class="exlead"></span><span class="exja">中3 現在完了形(完了・結果)</span></div><div class="exrow"><span class="exnum">8</span><span class="exen"><span class="en">What color do you like?</span></span><span class="exlead"></span><span class="exja">中1 疑問詞</span></div><div class="exrow"><span class="exnum">9</span><span class="exen"><span class="en">Will she come to the party?</span></span><span class="exlead"></span><span class="exja">中2 未来形(will)</span></div><div class="exrow"><span class="exnum">10</span><span class="exen"><span class="en">Please show me what you have.</span></span><span class="exlead"></span><span class="exja">中3 SVOO(what節など)</span></div><div class="foot">総復習　文法100問（中1〜中3）　08　文法 8/10</div></section></div></div><div class="gwrap" data-i="8"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">09</span><div><div class="chlabel">総復習</div><div class="htitle">文法 9/10</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">You were at home yesterday.</span></span><span class="exlead"></span><span class="exja">中1 be動詞の過去形</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">Do you know what this is?</span></span><span class="exlead"></span><span class="exja">中3 間接疑問文</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">We study English.</span></span><span class="exlead"></span><span class="exja">中1 一般動詞(I/you/we/they)</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">I went to the store to buy a book.</span></span><span class="exlead"></span><span class="exja">中2 不定詞(副詞的用法)</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">The girl sitting under the tree is my sister.</span></span><span class="exlead"></span><span class="exja">中3 現在分詞の後置修飾</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">Do we have to take off our shoes here?</span></span><span class="exlead"></span><span class="exja">中2 助動詞(must / have to)</span></div><div class="exrow"><span class="exnum">7</span><span class="exen"><span class="en">I need something to drink.</span></span><span class="exlead"></span><span class="exja">中2 不定詞(形容詞的用法)</span></div><div class="exrow"><span class="exnum">8</span><span class="exen"><span class="en">They were not at home yesterday.</span></span><span class="exlead"></span><span class="exja">中1 be動詞の過去形</span></div><div class="exrow"><span class="exnum">9</span><span class="exen"><span class="en">The town they live in is very quiet.</span></span><span class="exlead"></span><span class="exja">中3 名詞を修飾する文(名詞＋主語＋動詞)</span></div><div class="exrow"><span class="exnum">10</span><span class="exen"><span class="en">He has many books to read.</span></span><span class="exlead"></span><span class="exja">中2 不定詞(形容詞的用法)</span></div><div class="foot">総復習　文法100問（中1〜中3）　09　文法 9/10</div></section></div></div><div class="gwrap" data-i="9"><div class="gscale"><section class="page"><div class="hdr"><div class="hdr-left"><span class="bignum">10</span><div><div class="chlabel">総復習</div><div class="htitle">文法 10/10</div></div></div></div><div class="hdr-rule"></div><div class="exrow"><span class="exnum">1</span><span class="exen"><span class="en">He tells me that he wants to be a doctor.</span></span><span class="exlead"></span><span class="exja">中3 SVOO(that節)</span></div><div class="exrow"><span class="exnum">2</span><span class="exen"><span class="en">Is it old?</span></span><span class="exlead"></span><span class="exja">中1 be動詞</span></div><div class="exrow"><span class="exnum">3</span><span class="exen"><span class="en">You play tennis.</span></span><span class="exlead"></span><span class="exja">中1 一般動詞(I/you/we/they)</span></div><div class="exrow"><span class="exnum">4</span><span class="exen"><span class="en">My mother made me a lunch box.</span></span><span class="exlead"></span><span class="exja">中2 SVOO(give / show / tell + 人 + 物)</span></div><div class="exrow"><span class="exnum">5</span><span class="exen"><span class="en">Today is the hottest day of the year.</span></span><span class="exlead"></span><span class="exja">中2 最上級</span></div><div class="exrow"><span class="exnum">6</span><span class="exen"><span class="en">The woman I met yesterday was a teacher.</span></span><span class="exlead"></span><span class="exja">中3 名詞を修飾する文(名詞＋主語＋動詞)</span></div><div class="exrow"><span class="exnum">7</span><span class="exen"><span class="en">You are running now.</span></span><span class="exlead"></span><span class="exja">中1 現在進行形</span></div><div class="exrow"><span class="exnum">8</span><span class="exen"><span class="en">She likes to play the piano.</span></span><span class="exlead"></span><span class="exja">中2 不定詞(名詞的用法)</span></div><div class="exrow"><span class="exnum">9</span><span class="exen"><span class="en">I wish it were not raining.</span></span><span class="exlead"></span><span class="exja">中3 仮定法(I wish ...)</span></div><div class="exrow"><span class="exnum">10</span><span class="exen"><span class="en">This is a car made in Japan.</span></span><span class="exlead"></span><span class="exja">中3 過去分詞の後置修飾</span></div><div class="foot">総復習　文法100問（中1〜中3）　10　文法 10/10</div></section></div></div><script>const RATE=0.68, GAP=2000, RATEJA=0.9;
+let voiceEN=null, voiceJP=null;
+function loadVoices(){const v=speechSynthesis.getVoices();
+  const pref=["Google US English","Microsoft Aria","Samantha","Google UK English Female","Karen"];
+  const en=v.filter(x=>/^en([-_]|$)/i.test(x.lang));
+  voiceEN=pref.map(p=>en.find(x=>x.name.includes(p))).find(Boolean)||en.find(x=>x.lang==="en-US")||en[0]||null;
+  const jp=["Google 日本語","Kyoko (Enhanced)","O-ren (Enhanced)","Kyoko","O-ren","Hattori","Microsoft Nanami Online","Microsoft Nanami","Microsoft Ayumi","Otoya","Google Japanese"];
+  const ja=v.filter(x=>/^ja/i.test(x.lang));
+  voiceJP=jp.map(p=>ja.find(x=>x.name===p)||ja.find(x=>x.name.includes(p))).find(Boolean)||ja.find(x=>!x.localService)||ja[0]||null;}
+try{loadVoices();speechSynthesis.onvoiceschanged=loadVoices;}catch(e){}
+let wd=null;
+function say(text,lang,done){
+  clearTimeout(wd);
+  let fired=false;
+  const fin=()=>{if(fired)return;fired=true;clearTimeout(wd);if(done)done();};
+  try{const u=new SpeechSynthesisUtterance(text);
+    if(lang==="ja"){u.lang="ja-JP";if(voiceJP)u.voice=voiceJP;u.rate=RATEJA;}
+    else{u.lang="en-US";if(voiceEN)u.voice=voiceEN;u.rate=RATE;}
+    u.onend=fin;u.onerror=fin;speechSynthesis.speak(u);
+    wd=setTimeout(fin,Math.max(3500,text.length*140));   // 読み上げが返ってこない時の保険
+  }catch(e){fin();}}
+function clean(el){const c=el.cloneNode(true);
+  c.querySelectorAll(".cja,.pja,.tja,.rx-ja,.exja,.exnum,.exlead,.rx-lead").forEach(x=>x.remove());
+  return c.textContent.replace(/\s+/g," ").trim();}
+function build(wrap){
+  const items=[];
+  const sel=".tab,.cmp td.lc,.cmp td.rc,.pex,.pchip,.ruleex .rx-en,table.be td.en,.exrow .exen";
+  wrap.querySelectorAll(sel).forEach(el=>{
+    const isTab=el.classList.contains("tab");
+    const t=clean(el);
+    if(!t) return;
+    if(!isTab && !/[A-Za-z]/.test(t)) return;
+    if(isTab && /気づい/.test(t)) return;   // 「気づいたことを書こう」は読み上げない
+    el.classList.add("say");
+    // 見出しの①②などの丸数字は読み上げない
+    el.dataset.say=isTab?t.replace(/^[\u2460-\u2473\u3251-\u325F]\s*/,""):t;
+    el.dataset.lang=isTab?"ja":"en";
+    el.onclick=()=>{stop();mark(el);
+      setTimeout(()=>say(el.dataset.say,el.dataset.lang,
+                         ()=>el.classList.remove("now")),80);};
+    items.push(el);});
+  return items;}
+
+const ROUNDS=3, LABELS=["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"];
+let seq=[],idx=0,running=false,paused=false,timer=null,rnd=0,chain=false;
+function mark(el){document.querySelectorAll(".say.now").forEach(x=>x.classList.remove("now"));
+  if(el){el.classList.add("now");el.scrollIntoView({block:"center",behavior:"smooth"});}}
+function setBtn(){const b=document.getElementById("pz");
+  b.textContent=paused?"▶ つづきから":"⏸ 一時停止";b.disabled=!running;
+  const n=document.getElementById("gnow");
+  n.textContent=running?(LABELS[curi]+"　"+(rnd+1)+"周目/"+ROUNDS):"";}
+function stop(){running=false;paused=false;chain=false;rnd=0;
+  clearTimeout(timer);clearTimeout(wd);speechSynthesis.cancel();mark(null);setBtn();}
+function step(){
+  if(!running||paused) return;
+  if(idx>=seq.length){
+    if(chain){
+      rnd++;
+      if(rnd<ROUNDS){idx=0;setBtn();timer=setTimeout(step,GAP);return;}
+      if(curi+1<wraps.length){playUnit(curi+1);return;}
+    }
+    stop();return;}
+  const el=seq[idx];mark(el);
+  say(el.dataset.say,el.dataset.lang||"en",()=>{
+    if(!running||paused) return;
+    idx++;timer=setTimeout(step,GAP);});}
+function playUnit(i){
+  stop();show(i);
+  seq=cur().items;idx=0;rnd=0;chain=true;running=true;paused=false;setBtn();
+  timer=setTimeout(step,420);}
+const wraps=[...document.querySelectorAll(".gwrap")];
+const tabs=[...document.querySelectorAll(".gtab")];
+const built=wraps.map(w=>({w,items:null}));
+let curi=0;
+function cur(){const c=built[curi];if(!c.items)c.items=build(c.w);return c;}
+function fit(){wraps.forEach(w=>{if(w.clientWidth<=0) return;
+  const s=w.querySelector(".gscale");
+  const pw=s.firstElementChild.offsetWidth||794;
+  const k=Math.min(1,(w.clientWidth-8)/pw);
+  s.style.transform="scale("+k+")";
+  s.style.height=(s.firstElementChild.offsetHeight*k)+"px";
+  s.style.width=pw+"px";});}
+function show(i){curi=i;
+  document.body.classList.remove("tocon");
+  wraps.forEach((w,j)=>w.classList.toggle("on",i===j));
+  tabs.forEach((t,j)=>t.classList.toggle("on",i===j));
+  const tb=tabs[i].parentNode; tb.scrollLeft=tabs[i].offsetLeft-tb.clientWidth/2+30;
+  try{history.replaceState(null,"","#p"+(i+1));}catch(e){}
+  cur();fit();window.scrollTo(0,0);}
+function showToc(){stop();document.body.classList.add("tocon");
+  wraps.forEach(w=>w.classList.remove("on"));
+  try{history.replaceState(null,"","#toc");}catch(e){}
+  window.scrollTo(0,0);}
+tabs.forEach((t,i)=>t.onclick=()=>{stop();show(i);});
+document.querySelectorAll(".tocrow").forEach(r=>{
+  r.onclick=()=>playUnit(+r.dataset.i);});
+document.getElementById("playall").onclick=()=>playUnit(0);
+document.getElementById("tocbtn").onclick=showToc;
+document.getElementById("from0").onclick=()=>playUnit(curi);
+document.getElementById("pz").onclick=()=>{
+  if(!running) return;
+  paused=!paused;
+  if(paused){clearTimeout(timer);clearTimeout(wd);speechSynthesis.cancel();}
+  else{timer=setTimeout(step,120);}
+  setBtn();};
+addEventListener("resize",fit);
+addEventListener("hashchange",()=>{const m=(location.hash||"").match(/^#p(\d+)$/);
+  if(m){const n=+m[1]-1;if(n>=0&&n<wraps.length&&n!==curi){stop();show(n);}}
+  else if((location.hash||"")==="#toc"){showToc();}});
+(function(){const m=(location.hash||"").match(/^#p(\d+)$/);
+  if(m&&+m[1]>=1&&+m[1]<=wraps.length){show(+m[1]-1);}else{showToc();}})();
+
+</script><script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){});});}</script></body></html>

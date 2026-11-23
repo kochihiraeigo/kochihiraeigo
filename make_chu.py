@@ -70,3 +70,9 @@ assert pos==len(flat),(pos,len(flat))
 build('gc1.html','g','中1　文法プリント（暗唱例文）','中1',g1)
 build('gc2.html','g','中2　文法プリント（暗唱例文）','中2',g2)
 build('gc3.html','g','中3　文法プリント（暗唱例文）','中3',g3)
+
+# ---- 総復習 (音声: 解答の英文を10問ずつ)
+sel=json.load(open(W+'review_sel.json'))
+def clean(en): return re.sub(r"\((?:\w+'\w+|Let's)\)","",en)
+rv=[{'ch':'総復習','title':f'文法 {i+1}/10','items':[(f"{g} {u}",clean(en)) for g,u,sub,jp,en in sel[i*10:(i+1)*10]]} for i in range(10)]
+build('rv.html','g','総復習　文法100問（中1〜中3）','総復習',rv)
